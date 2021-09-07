@@ -9,19 +9,19 @@
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
-		<string>Productivity</string>
+		<string>Software - Unlicensed</string>
 		<key>GROUP_NAME</key>
-		<string>%NAME%-update-smart</string>
+		<string>Patch Reporting: %NAME%</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>SmartGroupTemplate.xml</string>
+		<string>GoogleDriveSmartGroupTemplate.xml</string>
 		<key>NAME</key>
 		<string>Google Drive</string>
 		<key>POLICY_CATEGORY</key>
-		<string>Testing</string>
+		<string>Automatic Patch Management</string>
 		<key>POLICY_TEMPLATE</key>
 		<string>GoogleDrivePolicyTemplate.xml</string>
 		<key>SELF_SERVICE_DESCRIPTION</key>
-		<string>Ultimate solution for Google Drive. </string>
+		<string>Ultimate solution for Google Drive.</string>
 		<key>SELF_SERVICE_ICON</key>
 		<string>%NAME%.png</string>
 	</dict>
