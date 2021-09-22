@@ -26,7 +26,7 @@
   <key>MinimumVersion</key>
   <string>0.4.0</string>
   <key>ParentRecipe</key>
-  <string>com.github.team-dab.Anaconda</string>
+  <string>com.github.team-dab.download.Anaconda</string>
   <key>Process</key>
   <array>
     <dict>
