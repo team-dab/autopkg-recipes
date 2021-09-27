@@ -61,7 +61,7 @@
 				<array>
 					<dict>
 						<key>name</key>
-						<string>Remove-Caffeine-duplicates.sh</string>
+						<string>Remove-Caffeine-duplicates</string>
 						<key>template_path</key>
 						<string>CaffeineScriptTemplate.xml</string>
 					</dict>

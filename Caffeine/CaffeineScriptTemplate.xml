@@ -1,7 +1,7 @@
 <script>
 	<name>Remove-Caffeine-duplicates</name>
 	<category>Testing</category>
-	<filename>Remove-Caffeine-duplicates.sh</filename>
+	<filename>Remove-Caffeine-duplicates</filename>
 	<info />
 	<notes />
 	<priority>Before</priority>
