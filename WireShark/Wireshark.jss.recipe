@@ -71,7 +71,7 @@
 			<key>Processor</key>
 			<string>JSSImporter</string>
 		</dict>
-				<dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>category</key>
@@ -93,7 +93,6 @@
 			<string>Self Service install policy</string>
 			<key>Processor</key>
 			<string>JSSImporter</string>
-		</dict>
 		</dict>
 	</array>
 </dict>
