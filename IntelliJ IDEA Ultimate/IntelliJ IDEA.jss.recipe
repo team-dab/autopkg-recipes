@@ -26,7 +26,7 @@
   <key>MinimumVersion</key>
   <string>0.4.0</string>
   <key>ParentRecipe</key>
-  <string>com.github.txhaflaire.pkg.IntelliJIDEA</string>
+  <string>com.github.team-dab.pkg.IntelliJIDEA</string>
   <key>Process</key>
   <array>
   <dict>
