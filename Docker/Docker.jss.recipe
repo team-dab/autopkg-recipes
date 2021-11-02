@@ -78,6 +78,13 @@
 			<dict>
 				<key>category</key>
 				<string>%CATEGORY%</string>
+				<key>groups</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string></string>
+					</dict>
+				</array>
 				<key>policy_category</key>
 				<string>%SELFSERVICE_POLICY_CATEGORY%</string>
 				<key>policy_template</key>
