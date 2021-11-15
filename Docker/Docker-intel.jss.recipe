@@ -21,7 +21,7 @@
 		<key>SELFSERVICE_GROUP_TEMPLATE</key>
 		<string>SelfServiceSmartGroupTemplate.xml</string>
 		<key>SELFSERVICE_POLICY_TEMPLATE</key>
-		<string>DockerSelfServicePolicyTemplate.xml</string>
+		<string>DockerIntelSelfServicePolicyTemplate.xml</string>
 		<key>SELFSERVICE_POLICY_CATEGORY</key>
 		<string>Software - Unlicensed</string>
 	</dict>
