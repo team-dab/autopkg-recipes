@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of Docker and imports it into your JSS.</string>
+	<key>Identifier</key>
+	<string>com.github.team-dab.jss.Docker</string>
+	<key>Input</key>
+	<dict>
+		<key>SPARKLE_FEED_URL</key>
+		<string>https://desktop.docker.com/mac/main/amd64/appcast.xml</string>
+		<key>CATEGORY</key>
+		<string>Software - Unlicensed</string>
+		<key>NAME</key>
+		<string>Docker-Intel</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.chilcote.pkg.Docker</string>
+	<key>Process</key>
+	<array>
+	<dict>
+		<key>Processor</key>
+		<string>com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator</string>
+	</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>category</key>
+				<string>%CATEGORY%</string>
+				<key>prod_name</key>
+				<string>%NAME%</string>
+			</dict>
+			<key>Processor</key>
+			<string>JSSImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
