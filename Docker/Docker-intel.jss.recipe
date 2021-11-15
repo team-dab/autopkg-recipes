@@ -14,6 +14,16 @@
 		<string>Software - Unlicensed</string>
 		<key>NAME</key>
 		<string>Docker-Intel</string>
+		<key>SELF_SERVICE_DESCRIPTION</key>
+		<string>Docker containers wrap a piece of software in a complete filesystem that contains everything needed to run: code, runtime, system tools, system libraries - anything that can be installed on a server. This guarantees that the software will always run the same, regardless of its environment.</string>
+		<key>SELF_SERVICE_ICON</key>
+		<string>%NAME%.png</string>
+		<key>SELFSERVICE_GROUP_TEMPLATE</key>
+		<string>SelfServiceSmartGroupTemplate.xml</string>
+		<key>SELFSERVICE_POLICY_TEMPLATE</key>
+		<string>SelfServicePolicyTemplate.xml</string>
+		<key>SELFSERVICE_POLICY_CATEGORY</key>
+		<string>Software - Unlicensed</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
@@ -33,6 +43,36 @@
 				<key>prod_name</key>
 				<string>%NAME%</string>
 			</dict>
+			<key>Processor</key>
+			<string>JSSImporter</string>
+		</dict>
+				<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>category</key>
+				<string>%CATEGORY%</string>
+				<key>groups</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string></string>
+					</dict>
+				</array>
+				<key>policy_category</key>
+				<string>%SELFSERVICE_POLICY_CATEGORY%</string>
+				<key>policy_template</key>
+				<string>%SELFSERVICE_POLICY_TEMPLATE%</string>
+				<key>prod_name</key>
+				<string>%NAME%</string>
+				<key>self_service_description</key>
+				<string>%SELF_SERVICE_DESCRIPTION%</string>
+				<key>self_service_icon</key>
+				<string>%SELF_SERVICE_ICON%</string>
+				<key>STOP_IF_NO_JSS_UPLOAD</key>
+				<string>False</string>
+			</dict>
+			<key>Comment</key>
+			<string>Self Service install policy</string>
 			<key>Processor</key>
 			<string>JSSImporter</string>
 		</dict>
