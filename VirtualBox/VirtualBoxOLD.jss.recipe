@@ -3,42 +3,40 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Docker and imports it into your JSS.</string>
+	<string>Downloads the latest version of VirtualBox, makes a pkg of it, and uploads to the JSS.</string>
 	<key>Identifier</key>
-	<string>com.github.team-dab.jss.Docker-ARM64</string>
+	<string>com.github.team-dab.jss.VirtualBox</string>
 	<key>Input</key>
 	<dict>
-		<key>SPARKLE_FEED_URL</key>
-		<string>https://desktop.docker.com/mac/main/arm64/appcast.xml</string>
 		<key>CATEGORY</key>
 		<string>Software - Unlicensed</string>
 		<key>GROUP_NAME</key>
 		<string>Patch Reporting: %NAME%</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>SmartGroupARM64Template.xml</string>
+		<string>VirtualBoxSmartGroupTemplate.xml</string>
 		<key>NAME</key>
-		<string>Docker-ARM64</string>
+		<string>VirtualBox</string>
 		<key>POLICY_CATEGORY</key>
 		<string>Automatic Patch Management</string>
 		<key>POLICY_TEMPLATE</key>
-		<string>PolicyTemplate.xml</string>
-		<key>APPNAME_WITHOUTPROCESSOR</key>
-		<string>Docker.app</string>
+		<string>VirtualBoxPolicyTemplate.xml</string>
+		<key>POLICY_TRIGGER</key>
+		<string>Install_VirtualBoxUpdate</string>
 		<key>SELF_SERVICE_DESCRIPTION</key>
-		<string>Docker containers wrap a piece of software in a complete filesystem that contains everything needed to run: code, runtime, system tools, system libraries - anything that can be installed on a server. This guarantees that the software will always run the same, regardless of its environment.</string>
+		<string>VirtualBox is a powerful x86 and AMD64/Intel64 virtualization product for enterprise as well as home use.</string>
 		<key>SELF_SERVICE_ICON</key>
-		<string>%NAME%.png</string>
+		<string>VirtualBox.png</string>
 		<key>SELFSERVICE_GROUP_TEMPLATE</key>
 		<string>SelfServiceSmartGroupTemplate.xml</string>
 		<key>SELFSERVICE_POLICY_TEMPLATE</key>
-		<string>SelfServicePolicyARM64Template.xml</string>
+		<string>SelfServicePolicyTemplate.xml</string>
 		<key>SELFSERVICE_POLICY_CATEGORY</key>
 		<string>Software - Unlicensed</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.6.1</string>
+	<string>0.4.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.chilcote.pkg.Docker</string>
+	<string>com.github.homebysix.pkg.VirtualBox</string>
 	<key>Process</key>
 	<array>
 	<dict>
@@ -67,6 +65,10 @@
 				<string>%POLICY_TEMPLATE%</string>
 				<key>prod_name</key>
 				<string>%NAME%</string>
+				<key>self_service_description</key>
+				<string>%SELF_SERVICE_DESCRIPTION%</string>
+				<key>self_service_icon</key>
+				<string>%SELF_SERVICE_ICON%</string>
 			</dict>
 			<key>Processor</key>
 			<string>JSSImporter</string>
@@ -76,13 +78,6 @@
 			<dict>
 				<key>category</key>
 				<string>%CATEGORY%</string>
-				<key>groups</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string></string>
-					</dict>
-				</array>
 				<key>policy_category</key>
 				<string>%SELFSERVICE_POLICY_CATEGORY%</string>
 				<key>policy_template</key>
