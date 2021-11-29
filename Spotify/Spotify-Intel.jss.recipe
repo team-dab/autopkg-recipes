@@ -5,19 +5,19 @@
 	<key>Description</key>
 	<string>Downloads the latest Spotify dmg and creates a pkg from it. Then, uploads to the JSS.</string>
 	<key>Identifier</key>
-	<string>com.github.team-dab.jss.Spotify-ARM64</string>
+	<string>com.github.team-dab.jss.Spotify-Intel</string>
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
-		<string>https://download.scdn.co/SpotifyARM64.dmg</string>
+		<string>https://download.scdn.co/Spotify.dmg</string>
 		<key>CATEGORY</key>
 		<string>Software - Unlicensed</string>
 		<key>GROUP_NAME</key>
 		<string>Patch Reporting: %NAME%</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>SmartGroupARM64Template.xml</string>
+		<string>SmartGroupIntelTemplate.xml</string>
 		<key>NAME</key>
-		<string>Spotify-ARM64</string>
+		<string>Spotify-Intel</string>
 		<key>POLICY_CATEGORY</key>
 		<string>Automatic Patch Management</string>
 		<key>POLICY_TEMPLATE</key>
@@ -31,7 +31,7 @@
 		<key>SELFSERVICE_GROUP_TEMPLATE</key>
 		<string>SelfServiceSmartGroupTemplate.xml</string>
 		<key>SELFSERVICE_POLICY_TEMPLATE</key>
-		<string>SelfServicePolicyARM64Template.xml</string>
+		<string>SelfServicePolicyIntelTemplate.xml</string>
 		<key>SELFSERVICE_POLICY_CATEGORY</key>
 		<string>Software - Unlicensed</string>
 	</dict>
