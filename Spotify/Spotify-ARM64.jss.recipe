@@ -28,6 +28,8 @@
 		<string>Stream music, create playlists and more.</string>
 		<key>SELF_SERVICE_ICON</key>
 		<string>%APPNAME_WITHOUTPROCESSOR%.png</string>
+		<key>SELFSERVICE_GROUP_TEMPLATE</key>
+		<string>SelfServiceSmartGroupTemplate.xml</string>
 		<key>SELFSERVICE_POLICY_TEMPLATE</key>
 		<string>SelfServicePolicyARM64Template.xml</string>
 		<key>SELFSERVICE_POLICY_CATEGORY</key>
@@ -86,8 +88,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>category</key>
-				<string>%CATEGORY%</string>
 				<key>groups</key>
 				<array>
 					<dict>
