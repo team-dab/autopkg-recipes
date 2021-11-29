@@ -72,6 +72,15 @@
 				<string>%POLICY_TEMPLATE%</string>
 				<key>prod_name</key>
 				<string>%NAME%</string>
+				<key>scripts</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>SpotifyPostinstall.sh</string>
+						<key>template_path</key>
+						<string>SpotifyScriptTemplate.xml</string>
+					</dict>
+				</array>
 			</dict>
 			<key>Processor</key>
 			<string>JSSImporter</string>
@@ -99,7 +108,7 @@
 				<key>self_service_icon</key>
 				<string>%SELF_SERVICE_ICON%</string>
 				<key>STOP_IF_NO_JSS_UPLOAD</key>
-				<string>False</string>
+				<string>True</string>
 			</dict>
 			<key>Comment</key>
 			<string>Self Service install policy</string>
