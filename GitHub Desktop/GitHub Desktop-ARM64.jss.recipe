@@ -8,6 +8,8 @@
 	<string>com.github.team-dab.jss.GitHubDesktop</string>
 	<key>Input</key>
 	<dict>
+		<key>BUILD</key>
+		<string>darwin-arm64</string>		
 		<key>CATEGORY</key>
 		<string>Software - Unlicensed</string>
 		<key>GROUP_NAME</key>
