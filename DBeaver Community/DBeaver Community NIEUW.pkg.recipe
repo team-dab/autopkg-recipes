@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>DBeaver Community</string>
+		<string>DBeaver Community-ARM64</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
