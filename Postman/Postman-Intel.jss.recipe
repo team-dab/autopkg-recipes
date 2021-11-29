@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version of Postman and then uploads to the JSS</string>
 	<key>Identifier</key>
-	<string>com.github.team-dab.jss.postman-ARM64</string>
+	<string>com.github.team-dab.jss.postman-Intel</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
@@ -13,9 +13,9 @@
 		<key>GROUP_NAME</key>
 		<string>Patch Reporting: %NAME%</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>SmartGroupARM64Template.xml</string>
+		<string>SmartGroupIntelTemplate.xml</string>
 		<key>NAME</key>
-		<string>Postman-ARM64</string>
+		<string>Postman-Intel</string>
 		<key>POLICY_CATEGORY</key>
 		<string>Automatic Patch Management</string>
 		<key>POLICY_TEMPLATE</key>
@@ -29,7 +29,7 @@
 		<key>SELFSERVICE_GROUP_TEMPLATE</key>
 		<string>SelfServiceSmartGroupTemplate.xml</string>
 		<key>SELFSERVICE_POLICY_TEMPLATE</key>
-		<string>SelfServicePolicyARM64Template.xml</string>
+		<string>SelfServicePolicyIntelTemplate.xml</string>
 		<key>SELFSERVICE_POLICY_CATEGORY</key>
 		<string>Software - Unlicensed</string>
 	</dict>
