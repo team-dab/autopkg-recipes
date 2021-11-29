@@ -59,11 +59,7 @@
 				<array>
 					<dict>
 						<key>name</key>
-						<string>%GROUP_NAME%</string>
-						<key>smart</key>
-						<true/>
-						<key>template_path</key>
-						<string>%GROUP_TEMPLATE%</string>
+						<string></string>
 					</dict>
 				</array>
 				<key>policy_category</key>
@@ -108,7 +104,7 @@
 				<key>self_service_icon</key>
 				<string>%SELF_SERVICE_ICON%</string>
 				<key>STOP_IF_NO_JSS_UPLOAD</key>
-				<string>True</string>
+				<string>False</string>
 			</dict>
 			<key>Comment</key>
 			<string>Self Service install policy</string>
