@@ -92,16 +92,12 @@
 				<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>category</key>
-				<string>%CATEGORY%</string>
 				<key>Arguments</key>
 				<dict>
 					<key>groups</key>
 					<array>
 						<dict>
 							<key>name</key>
-							<string></string>
-							<key>template_path</key>
 							<string></string>
 						</dict>
 					</array>
@@ -134,8 +130,6 @@
 						<string></string>
 					</dict>
 				</array>
-				<key>category</key>
-				<string>%CATEGORY%</string>
 				<key>policy_category</key>
 				<string>%ADE_POLICY_CATEGORY%</string>
 				<key>policy_template</key>
