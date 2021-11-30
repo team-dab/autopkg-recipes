@@ -23,7 +23,7 @@
 		<key>POLICY_CATEGORY</key>
 		<string>Automatic Patch Management</string>
 		<key>POLICY_TEMPLATE</key>
-		<string>BravePolicyTemplate-ARM64.xml</string>
+		<string>BravePolicyTemplate.xml</string>
 		<key>APPNAME_WITHOUTPROCESSOR</key>
 		<string>Brave</string>
 		<key>POLICY_TRIGGER</key>
@@ -100,6 +100,8 @@
 					<array>
 						<dict>
 							<key>name</key>
+							<string></string>
+							<key>template_path</key>
 							<string></string>
 						</dict>
 					</array>
