@@ -121,6 +121,33 @@
 			<key>Processor</key>
 			<string>JSSImporter</string>
 		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>category</key>
+				<string>%CATEGORY%</string>
+				<key>policy_category</key>
+				<string>%ADE_POLICY_CATEGORY%</string>
+				<key>policy_template</key>
+				<string>%ADE_POLICY_TEMPLATE%</string>
+				<key>ade_policy_trigger</key>
+				<string>%ADE_POLICY_TRIGGER%</string>
+				<key>prod_name</key>
+				<string>%NAME%</string>
+				<key>ade_policy_name</key>
+				<string>%ADE_POLICY_NAME%</string>
+				<key>self_service_description</key>
+				<string>%SELF_SERVICE_DESCRIPTION%</string>
+				<key>self_service_icon</key>
+				<string>%SELF_SERVICE_ICON%</string>
+				<key>STOP_IF_NO_JSS_UPLOAD</key>
+				<string>False</string>
+			</dict>
+			<key>Comment</key>
+			<string>Automated Device Enrollment install policy</string>
+			<key>Processor</key>
+			<string>JSSImporter</string>
+		</dict>
 	</array>
 </dict>
 </plist>
