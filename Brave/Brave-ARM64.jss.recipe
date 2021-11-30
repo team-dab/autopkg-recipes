@@ -111,6 +111,7 @@
 			<key>Processor</key>
 			<string>JSSImporter</string>
 		<dict>
+		</dict>
 			<key>Arguments</key>
 			<dict>
 				<key>groups</key>
