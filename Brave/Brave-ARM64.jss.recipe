@@ -103,6 +103,7 @@
 							<string></string>
 						</dict>
 					</array>
+				</dict>
 				<key>policy_category</key>
 				<string>%SELFSERVICE_POLICY_CATEGORY%</string>
 				<key>policy_template</key>
