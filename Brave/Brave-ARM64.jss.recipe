@@ -124,8 +124,13 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>category</key>
-				<string>%CATEGORY%</string>
+				<key>groups</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string></string>
+					</dict>
+				</array>
 				<key>policy_category</key>
 				<string>%ADE_POLICY_CATEGORY%</string>
 				<key>policy_template</key>
@@ -136,10 +141,6 @@
 				<string>%NAME%</string>
 				<key>ade_policy_name</key>
 				<string>%ADE_POLICY_NAME%</string>
-				<key>self_service_description</key>
-				<string>%SELF_SERVICE_DESCRIPTION%</string>
-				<key>self_service_icon</key>
-				<string>%SELF_SERVICE_ICON%</string>
 				<key>STOP_IF_NO_JSS_UPLOAD</key>
 				<string>False</string>
 			</dict>
