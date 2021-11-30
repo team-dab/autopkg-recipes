@@ -38,6 +38,8 @@
 		<string>SelfServicePolicyARM64Template.xml</string>
 		<key>SELFSERVICE_POLICY_CATEGORY</key>
 		<string>Software - Unlicensed</string>
+		<key>SELFSERVICE_GROUP_NAME</key>
+		<string>All Managed Clients</string>
 		<key>ADE_POLICY_NAME</key>
 		<string>20 Brave-ARM64</string>
 		<key>ADE_POLICY_TEMPLATE</key>
@@ -83,28 +85,31 @@
 				<string>%POLICY_TEMPLATE%</string>
 				<key>prod_name</key>
 				<string>%NAME%</string>
-			</dict>
-			<key>Processor</key>
-			<string>JSSImporter</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>groups</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string></string>
-					</dict>
-				</array>
-				<key>policy_category</key>
-				<string>%SELFSERVICE_POLICY_CATEGORY%</string>
-				<key>policy_template</key>
-				<string>%SELFSERVICE_POLICY_TEMPLATE%</string>
 				<key>self_service_description</key>
 				<string>%SELF_SERVICE_DESCRIPTION%</string>
 				<key>self_service_icon</key>
 				<string>%SELF_SERVICE_ICON%</string>
+			</dict>
+			<key>Processor</key>
+			<string>JSSImporter</string>
+		</dict>
+				<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>category</key>
+				<string>%CATEGORY%</string>
+				<key>policy_category</key>
+				<string>%SELFSERVICE_POLICY_CATEGORY%</string>
+				<key>policy_template</key>
+				<string>%SELFSERVICE_POLICY_TEMPLATE%</string>
+				<key>prod_name</key>
+				<string>%NAME%</string>
+				<key>self_service_description</key>
+				<string>%SELF_SERVICE_DESCRIPTION%</string>
+				<key>self_service_icon</key>
+				<string>%SELF_SERVICE_ICON%</string>
+				<key>STOP_IF_NO_JSS_UPLOAD</key>
+				<string>False</string>
 			</dict>
 			<key>Comment</key>
 			<string>Self Service install policy</string>
@@ -114,13 +119,8 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>groups</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string></string>
-					</dict>
-				</array>
+				<key>category</key>
+				<string>%CATEGORY%</string>
 				<key>policy_category</key>
 				<string>%ADE_POLICY_CATEGORY%</string>
 				<key>policy_template</key>
@@ -131,6 +131,10 @@
 				<string>%NAME%</string>
 				<key>ade_policy_name</key>
 				<string>%ADE_POLICY_NAME%</string>
+				<key>self_service_description</key>
+				<string>%SELF_SERVICE_DESCRIPTION%</string>
+				<key>self_service_icon</key>
+				<string>%SELF_SERVICE_ICON%</string>
 				<key>STOP_IF_NO_JSS_UPLOAD</key>
 				<string>False</string>
 			</dict>
