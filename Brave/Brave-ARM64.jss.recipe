@@ -10,6 +10,8 @@
 	<string>com.github.team-dab.jss.Brave-ARM64</string>
 	<key>Input</key>
 	<dict>
+		<key>DOWNLOAD_URL</key>
+		<string>https://laptop-updates.brave.com/latest/osxarm64</string>		
 		<key>APP_FILENAME</key>
 		<string>Brave</string>
 		<key>CATEGORY</key>
