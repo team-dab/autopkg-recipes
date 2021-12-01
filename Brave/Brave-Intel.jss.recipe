@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Brave and imports it into your JSS.</string>
 	<key>Identifier</key>
-	<string>com.github.team-dab.jss.Brave-ARM64</string>
+	<string>com.github.team-dab.jss.Brave-Intel</string>
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
@@ -17,9 +17,9 @@
 		<key>GROUP_NAME</key>
 		<string>Patch Reporting: %NAME%</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>BraveSmartGroupTemplate-ARM64.xml</string>
+		<string>BraveSmartGroupTemplate-Intel.xml</string>
 		<key>NAME</key>
-		<string>Brave-ARM64</string>
+		<string>Brave-Intel</string>
 		<key>POLICY_CATEGORY</key>
 		<string>Automatic Patch Management</string>
 		<key>POLICY_TEMPLATE</key>
@@ -27,7 +27,7 @@
 		<key>APPNAME_WITHOUTPROCESSOR</key>
 		<string>Brave</string>
 		<key>POLICY_TRIGGER</key>
-		<string>Install_BraveUpdate-ARM64</string>
+		<string>Install_BraveUpdate-Intel</string>
 		<key>SELF_SERVICE_DESCRIPTION</key>
 		<string>Brave Web Browser is a fast, free, secure web browser with a built-in ad blocker*, tracking and security protection, and optimized data and battery experience.</string>
 		<key>SELF_SERVICE_ICON</key>
@@ -35,19 +35,19 @@
 		<key>SELFSERVICE_GROUP_TEMPLATE</key>
 		<string>SelfServiceSmartGroupTemplate.xml</string>
 		<key>SELFSERVICE_POLICY_TEMPLATE</key>
-		<string>SelfServicePolicyARM64Template.xml</string>
+		<string>SelfServicePolicyIntelTemplate.xml</string>
 		<key>SELFSERVICE_POLICY_CATEGORY</key>
 		<string>Software - Unlicensed</string>
 		<key>SELFSERVICE_GROUP_NAME</key>
 		<string>All Managed Clients</string>
 		<key>ADE_POLICY_NAME</key>
-		<string>20 Brave-ARM64</string>
+		<string>20 Brave-Intel</string>
 		<key>ADE_POLICY_TEMPLATE</key>
 		<string>ADEPolicyTemplate.xml</string>
 		<key>ADE_GROUP_TEMPLATE</key>
 		<string>ADESmartGroupTemplate.xml</string>
 		<key>ADE_POLICY_TRIGGER</key>
-		<string>DEP_BraveBrowser-ARM64</string>
+		<string>DEP_BraveBrowser-Intel</string>
 		<key>ADE_POLICY_CATEGORY</key>
 		<string>@Automated Device Enrollment</string>
 	</dict>
