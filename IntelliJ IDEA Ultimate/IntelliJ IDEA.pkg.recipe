@@ -11,7 +11,7 @@
 		<key>BUNDLE_ID</key>
 		<string>com.jetbrains.intellij</string>
 		<key>NAME</key>
-		<string>IntelliJ IDEA-KOEK</string>
+		<string>IntelliJ IDEA</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
