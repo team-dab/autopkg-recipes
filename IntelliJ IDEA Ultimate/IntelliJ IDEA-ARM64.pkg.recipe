@@ -13,7 +13,7 @@
 		<key>NAME</key>
 		<string>IntelliJ IDEA</string>
 		<key>platform</key>
-		<string>macM1</string>
+		<string>mac</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
