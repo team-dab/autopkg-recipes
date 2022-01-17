@@ -13,7 +13,7 @@
 		<key>GROUP_NAME</key>
 		<string>Patch Reporting: %NAME%</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>SmartGroupTemplate.xml</string>
+		<string>SmartGroupUniversalTemplate.xml</string>
 		<key>NAME</key>
 		<string>VLC</string>
 		<key>POLICY_CATEGORY</key>
@@ -39,10 +39,10 @@
 	<string>com.github.apizz.pkg.VLCUniversal</string>
 	<key>Process</key>
 	<array>
-	<dict>
-		<key>Processor</key>
-		<string>com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator</string>
-	</dict>
+		<dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -63,8 +63,6 @@
 				<string>%POLICY_CATEGORY%</string>
 				<key>policy_template</key>
 				<string>%POLICY_TEMPLATE%</string>
-				<key>policy_trigger</key>
-				<string>%POLICY_TRIGGER%</string>
 				<key>prod_name</key>
 				<string>%NAME%</string>
 				<key>self_service_description</key>
@@ -80,6 +78,13 @@
 			<dict>
 				<key>category</key>
 				<string>%CATEGORY%</string>
+				<key>groups</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string></string>
+					</dict>
+				</array>
 				<key>policy_category</key>
 				<string>%SELFSERVICE_POLICY_CATEGORY%</string>
 				<key>policy_template</key>
