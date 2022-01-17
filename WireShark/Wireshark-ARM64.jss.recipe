@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Wireshark and builds a pkg. Then, uploads to the JSS.</string>
 	<key>Identifier</key>
-	<string>com.github.team-dab.jss.Wireshark</string>
+	<string>com.github.team-dab.jss.Wireshark-ARM64</string>
 	<key>Input</key>
 	<dict>
 		<key>ARCH</key>
