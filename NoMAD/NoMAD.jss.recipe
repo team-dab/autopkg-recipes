@@ -19,7 +19,7 @@
             <key>ICON</key>
             <string>NoMAD.png</string>
             <key>GROUP_TEMPLATE</key>
-            <string>SmartGroupTemplate.xml</string>
+            <string>SmartGroupUniversalTemplate.xml</string>
             <key>GROUP_NAME</key>
             <string>Patch Reporting: %NAME%</string>
             <key>DESCRIPTION</key>
