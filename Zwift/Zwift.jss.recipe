@@ -13,7 +13,7 @@
 		<key>GROUP_NAME</key>
 		<string>Patch Reporting: %NAME%</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>SmartGroupTemplate.xml</string>
+		<string>SmartGroupUniversalTemplate.xml</string>
 		<key>NAME</key>
 		<string>Zwift</string>
 		<key>POLICY_CATEGORY</key>
@@ -37,10 +37,10 @@
 	<string>com.github.andredb90.pkg.Zwift</string>
 	<key>Process</key>
 	<array>
-	<dict>
-		<key>Processor</key>
-		<string>com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator</string>
-	</dict>
+		<dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -76,6 +76,13 @@
 			<dict>
 				<key>category</key>
 				<string>%CATEGORY%</string>
+				<key>groups</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string></string>
+					</dict>
+				</array>
 				<key>policy_category</key>
 				<string>%SELFSERVICE_POLICY_CATEGORY%</string>
 				<key>policy_template</key>
