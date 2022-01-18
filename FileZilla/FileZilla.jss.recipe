@@ -13,7 +13,7 @@
 		<key>GROUP_NAME</key>
 		<string>Patch Reporting: %NAME%</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>SmartGroupTemplate.xml</string>
+		<string>SmartGroupUniversalTemplate.xml</string>
 		<key>NAME</key>
 		<string>FileZilla</string>
 		<key>POLICY_CATEGORY</key>
@@ -24,6 +24,12 @@
 		<string>FileZilla is a fast and reliable cross-platform FTP, FTPS and SFTP client.</string>
 		<key>SELF_SERVICE_ICON</key>
 		<string>%NAME%.png</string>
+		<key>SELFSERVICE_GROUP_TEMPLATE</key>
+		<string>SelfServiceSmartGroupTemplate.xml</string>
+		<key>SELFSERVICE_POLICY_TEMPLATE</key>
+		<string>SelfServicePolicyTemplate.xml</string>
+		<key>SELFSERVICE_POLICY_CATEGORY</key>
+		<string>Software - Unlicensed</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
@@ -31,15 +37,10 @@
 	<string>com.github.scriptingosx.pkg.FileZilla</string>
 	<key>Process</key>
 	<array>
-	<dict>
-		<key>Arguments</key>
 		<dict>
-			<key>version</key>
-		<string>%version%</string>
+			<key>Processor</key>
+			<string>com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator</string>
 		</dict>
-		<key>Processor</key>
-		<string>com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator</string>
-	</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -67,6 +68,36 @@
 				<key>self_service_icon</key>
 				<string>%SELF_SERVICE_ICON%</string>
 			</dict>
+			<key>Processor</key>
+			<string>JSSImporter</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>category</key>
+				<string>%CATEGORY%</string>
+				<key>groups</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string></string>
+					</dict>
+				</array>
+				<key>policy_category</key>
+				<string>%SELFSERVICE_POLICY_CATEGORY%</string>
+				<key>policy_template</key>
+				<string>%SELFSERVICE_POLICY_TEMPLATE%</string>
+				<key>prod_name</key>
+				<string>%NAME%</string>
+				<key>self_service_description</key>
+				<string>%SELF_SERVICE_DESCRIPTION%</string>
+				<key>self_service_icon</key>
+				<string>%SELF_SERVICE_ICON%</string>
+				<key>STOP_IF_NO_JSS_UPLOAD</key>
+				<string>False</string>
+			</dict>
+			<key>Comment</key>
+			<string>Self Service install policy</string>
 			<key>Processor</key>
 			<string>JSSImporter</string>
 		</dict>
