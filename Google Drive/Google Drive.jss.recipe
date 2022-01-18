@@ -13,7 +13,7 @@
 		<key>GROUP_NAME</key>
 		<string>Patch Reporting: %NAME%</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>SmartGroupTemplate.xml</string>
+		<string>SmartGroupUniversalTemplate.xml</string>
 		<key>NAME</key>
 		<string>Google Drive</string>
 		<key>POLICY_CATEGORY</key>
@@ -59,6 +59,10 @@
 				<string>%POLICY_TEMPLATE%</string>
 				<key>prod_name</key>
 				<string>%NAME%</string>
+				<key>self_service_description</key>
+				<string>%SELF_SERVICE_DESCRIPTION%</string>
+				<key>self_service_icon</key>
+				<string>%SELF_SERVICE_ICON%</string>
 			</dict>
 			<key>Processor</key>
 			<string>JSSImporter</string>
