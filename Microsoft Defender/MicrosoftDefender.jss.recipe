@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Sketch and imports it into your JSS.</string>
+	<string>Downloads the latest version of the Microsoft Defender installer package, renames the package and imports it into your JSS.</string>
 	<key>Identifier</key>
-	<string>com.github.team-dab.jss.Sketch</string>
+	<string>com.github.team-dab.jss.microsoftdefender</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
@@ -13,28 +13,20 @@
 		<key>GROUP_NAME</key>
 		<string>Patch Reporting: %NAME%</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>SmartGroupTemplate.xml</string>
+		<string>MicrosoftDefenderSmartGroupTemplate.xml</string>
 		<key>NAME</key>
-		<string>Sketch</string>
+		<string>Microsoft Defender</string>
 		<key>POLICY_CATEGORY</key>
 		<string>Automatic Patch Management</string>
 		<key>POLICY_TEMPLATE</key>
-		<string>PolicyTemplate.xml</string>
-		<key>SELF_SERVICE_DESCRIPTION</key>
-		<string>Vector drawing application.</string>
-		<key>SELF_SERVICE_ICON</key>
-		<string>%NAME%.png</string>
+		<string>MicrosoftDefenderPolicyTemplate.xml</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.5.0</string>
+	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.homebysix.pkg.Sketch</string>
+	<string>com.github.rtrouton.pkg.microsoftdefender</string>
 	<key>Process</key>
 	<array>
-	<dict>
-		<key>Processor</key>
-		<string>com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator</string>
-	</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -57,10 +49,6 @@
 				<string>%POLICY_TEMPLATE%</string>
 				<key>prod_name</key>
 				<string>%NAME%</string>
-				<key>self_service_description</key>
-				<string>%SELF_SERVICE_DESCRIPTION%</string>
-				<key>self_service_icon</key>
-				<string>%SELF_SERVICE_ICON%</string>
 			</dict>
 			<key>Processor</key>
 			<string>JSSImporter</string>
