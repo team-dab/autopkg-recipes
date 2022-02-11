@@ -23,7 +23,7 @@
 		<key>INITIAL_GROUP_NAME</key>
 		<string>%NAME% is not installed</string>
 		<key>INITIAL_GROUP_TEMPLATE</key>
-		<string>MicrosoftDefenderInitialGroupTemplate.xml</string>
+		<string>MicrosoftDefenderInitialSmartGroupTemplate.xml</string>
 		<key>INITIAL_POLICY_CATEGORY</key>
 		<string>Software</string>
 		<key>INITIAL_POLICY_TEMPLATE</key>
@@ -72,6 +72,17 @@
 			<dict>
 				<key>category</key>
 				<string>%CATEGORY%</string>
+				<key>groups</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>%INITIAL_GROUP_NAME%</string>
+						<key>smart</key>
+						<true/>
+						<key>template_path</key>
+						<string>%INITIAL_GROUP_TEMPLATE%</string>
+					</dict>
+				</array>
 				<key>policy_category</key>
 				<string>%INITIAL_POLICY_CATEGORY%</string>
 				<key>policy_template</key>
