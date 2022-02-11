@@ -28,8 +28,8 @@
 		<string>Software</string>
 		<key>INITIAL_POLICY_TEMPLATE</key>
 		<string>MicrosoftDefenderInitialPolicyTemplate.xml</string>
-		<key>INITIAL_POLICY_NAME</key>
-		<string>18 Google Chrome</string>
+		<key>INITIAL_GROUP_TEMPLATE</key>
+		<string>MicrosoftDefenderInitialSmartGroupTemplate.xml</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
@@ -72,17 +72,6 @@
 			<dict>
 				<key>category</key>
 				<string>%CATEGORY%</string>
-				<key>groups</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>%INITIAL_GROUP_NAME%</string>
-						<key>smart</key>
-						<true/>
-						<key>template_path</key>
-						<string>%INITIAL_GROUP_TEMPLATE%</string>
-					</dict>
-				</array>
 				<key>policy_category</key>
 				<string>%INITIAL_POLICY_CATEGORY%</string>
 				<key>policy_template</key>
