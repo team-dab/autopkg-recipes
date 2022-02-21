@@ -1,6 +1,6 @@
 <policy>
 	<general>
-		<name>Patch Management - Install Latest %NAME%</name>
+		<name>%POLICY_NAME%</name>
 		<enabled>false</enabled>
 		<trigger_checkin>true</trigger_checkin>
 		<trigger_enrollment_complete>false</trigger_enrollment_complete>
