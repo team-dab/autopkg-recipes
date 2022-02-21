@@ -7,7 +7,7 @@ Input:
   NAME: Privileges
   CATEGORY: Software - Unlicensed
   GROUP_NAME: "Patch Reporting: %NAME%"
-  GROUP_TEMPLATE: SmartGroupUniversalTemplate.xml
+  GROUP_TEMPLATE: SmartGroupUniversalTemplateJAMF.xml
   TESTING_GROUP_NAME: Testing
   POLICY_CATEGORY: Automatic Patch Management
   POLICY_TEMPLATE: PolicyTemplate.xml
