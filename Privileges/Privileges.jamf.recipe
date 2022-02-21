@@ -52,6 +52,11 @@ We believe all users, including all developers, can benefit from using Privilege
 			<string>com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader</string>
 		</dict>
 		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>predicate</key>
+				<string>%CATEGORY%</string>
+			</dict>
 			<key>Processor</key>
 			<string>com.github.grahampugh.jamf-upload.processors/JamfPackageUploader</string>
 		</dict>
