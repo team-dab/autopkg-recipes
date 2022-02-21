@@ -21,7 +21,7 @@
 		<key>INITIAL_POLICY_CATEGORY</key>
 		<string>Software</string>
 		<key>INITIAL_POLICY_NAME</key>
-		<string>Software - Install %PROD_NAME%</string>
+		<string>Software - Install %NAME%</string>
 		<key>INITIAL_POLICY_TEMPLATE</key>
 		<string>MicrosoftDefenderInitialPolicyTemplate.xml</string>
 		<key>NAME</key>

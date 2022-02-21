@@ -16,7 +16,7 @@ Input:
   INITIAL_GROUP_TEMPLATE: MicrosoftDefenderInitialSmartGroupTemplate.xml
   INITIAL_POLICY_CATEGORY: Software
   INITIAL_POLICY_TEMPLATE: MicrosoftDefenderInitialPolicyTemplate.xml
-  INITIAL_POLICY_NAME: "Software - Install %PROD_NAME%"
+  INITIAL_POLICY_NAME: "Software - Install %NAME%"
 
 
 Process:
