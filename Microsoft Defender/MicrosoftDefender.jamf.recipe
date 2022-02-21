@@ -14,6 +14,16 @@
 		<string>Patch Reporting: %NAME%</string>
 		<key>GROUP_TEMPLATE</key>
 		<string>MicrosoftDefenderSmartGroupTemplate.xml</string>
+		<key>INITIAL_GROUP_NAME</key>
+		<string>%NAME% is not installed</string>
+		<key>INITIAL_GROUP_TEMPLATE</key>
+		<string>MicrosoftDefenderInitialSmartGroupTemplate.xml</string>
+		<key>INITIAL_POLICY_CATEGORY</key>
+		<string>Software</string>
+		<key>INITIAL_POLICY_NAME</key>
+		<string>Software - Install %PROD_NAME%</string>
+		<key>INITIAL_POLICY_TEMPLATE</key>
+		<string>MicrosoftDefenderInitialPolicyTemplate.xml</string>
 		<key>NAME</key>
 		<string>Microsoft Defender</string>
 		<key>POLICY_CATEGORY</key>
@@ -31,15 +41,6 @@
 	<string>com.github.rtrouton.pkg.microsoftdefender</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>category_name</key>
-				<string>%CATEGORY%</string>
-			</dict>
-			<key>Processor</key>
-			<string>com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader</string>
-		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator</string>
@@ -80,6 +81,28 @@
 				<string>%POLICY_NAME%</string>
 				<key>policy_template</key>
 				<string>%POLICY_TEMPLATE%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>computergroup_name</key>
+				<string>%INITIAL_GROUP_NAME%</string>
+				<key>computergroup_template</key>
+				<string>%INITIAL_GROUP_TEMPLATE%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>policy_name</key>
+				<string>%INITIAL_POLICY_NAME%</string>
+				<key>policy_template</key>
+				<string>%INITIAL_POLICY_TEMPLATE%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</string>
