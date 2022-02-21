@@ -21,7 +21,7 @@
 		<key>POLICY_NAME</key>
 		<string>Patch Management - Install Latest %NAME%</string>
 		<key>POLICY_TEMPLATE</key>
-		<string>PolicyTemplate.xml</string>
+		<string>PolicyTemplateJAMF.xml</string>
 		<key>SELF_SERVICE_DESCRIPTION</key>
 		<string>Privileges.app for macOS is designed to allow users to work as a standard user for day-to-day use, by providing a quick and easy way to get administrator rights when needed. When you do need admin rights, you can get them by clicking on the Privileges icon in your Dock.
 
