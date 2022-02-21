@@ -26,7 +26,9 @@ Process:
       category_name: "%CATEGORY%"
 
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
-
+    Arguments:
+      predicate: "%CATEGORY%"
+  
   - Processor: StopProcessingIf
     Arguments:
       predicate: "%UPDATE_PREDICATE%"
@@ -41,3 +43,4 @@ Process:
       policy_template: "%POLICY_TEMPLATE%"
       policy_name: "%POLICY_NAME%"
       icon: "%SELF_SERVICE_ICON%"
+      
