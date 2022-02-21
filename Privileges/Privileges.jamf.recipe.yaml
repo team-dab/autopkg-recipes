@@ -10,7 +10,7 @@ Input:
   GROUP_TEMPLATE: SmartGroupUniversalTemplateJAMF.xml
   TESTING_GROUP_NAME: Testing
   POLICY_CATEGORY: Automatic Patch Management
-  POLICY_TEMPLATE: PolicyTemplate.xml
+  POLICY_TEMPLATE: PolicyTemplateJAMF.xml
   POLICY_NAME: "Patch Management - Install Latest %NAME%"
   SELF_SERVICE_DISPLAY_NAME: "Install Latest %NAME%"
   SELF_SERVICE_DESCRIPTION: |
