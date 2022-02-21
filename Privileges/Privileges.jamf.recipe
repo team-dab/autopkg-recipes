@@ -54,7 +54,7 @@ We believe all users, including all developers, can benefit from using Privilege
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>predicate</key>
+				<key>pkg_category</key>
 				<string>%CATEGORY%</string>
 			</dict>
 			<key>Processor</key>
