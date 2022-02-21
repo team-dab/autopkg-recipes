@@ -13,7 +13,7 @@
 		<key>GROUP_NAME</key>
 		<string>Patch Reporting: %NAME%</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>SmartGroupUniversalTemplateJAMF.xml</string>
+		<string>SmartGroupUniversalTemplate.xml</string>
 		<key>NAME</key>
 		<string>Privileges</string>
 		<key>POLICY_CATEGORY</key>
@@ -50,6 +50,10 @@ We believe all users, including all developers, can benefit from using Privilege
 			</dict>
 			<key>Processor</key>
 			<string>com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
