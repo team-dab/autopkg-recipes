@@ -102,9 +102,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>computergroup_name</key>
-				<string>%GROUP_NAME%</string>
+				<string>%SELFSERVICE_GROUP_NAME%</string>
 				<key>computergroup_template</key>
-				<string>%GROUP_TEMPLATE%</string>
+				<string>%SELFSERVICE_GROUP_TEMPLATE%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader</string>
@@ -115,9 +115,9 @@
 				<key>icon</key>
 				<string>%SELFSERVICE_ICON%</string>
 				<key>policy_name</key>
-				<string>%POLICY_NAME%</string>
+				<string>%SELFSERVICE_POLICY_NAME%</string>
 				<key>policy_template</key>
-				<string>%POLICY_TEMPLATE%</string>
+				<string>%SELFSERVICE_POLICY_TEMPLATE%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</string>
