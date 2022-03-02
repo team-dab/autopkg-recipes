@@ -44,16 +44,4 @@ Process:
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
     Arguments:
       policy_template: "%POLICY_TEMPLATE%"
-      policy_name: "%POLICY_NAME%"
-
-  - Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader
-    Arguments:
-      computergroup_template: "%SELFSERVICE_GROUP_TEMPLATE%"
-      computergroup_name: "%SELFSERVICE_GROUP_NAME%"
-      
-  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
-    Arguments:
-      policy_template: "%SELFSERVICE_POLICY_TEMPLATE%"
-      policy_name: "%SELFSERVICE_POLICY_NAME%"
-      icon: "%SELFSERVICE_ICON%"
-      
+      policy_name: "%POLICY_NAME%"      

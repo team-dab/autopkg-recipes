@@ -98,30 +98,6 @@
 			<key>Processor</key>
 			<string>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</string>
 		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>computergroup_name</key>
-				<string>%SELFSERVICE_GROUP_NAME%</string>
-				<key>computergroup_template</key>
-				<string>%SELFSERVICE_GROUP_TEMPLATE%</string>
-			</dict>
-			<key>Processor</key>
-			<string>com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>icon</key>
-				<string>%SELFSERVICE_ICON%</string>
-				<key>policy_name</key>
-				<string>%SELFSERVICE_POLICY_NAME%</string>
-				<key>policy_template</key>
-				<string>%SELFSERVICE_POLICY_TEMPLATE%</string>
-			</dict>
-			<key>Processor</key>
-			<string>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</string>
-		</dict>
 	</array>
 </dict>
 </plist>
