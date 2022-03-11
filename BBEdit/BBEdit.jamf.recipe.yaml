@@ -11,6 +11,7 @@ Input:
   POLICY_CATEGORY: Automatic Patch Management
   POLICY_TEMPLATE: PolicyTemplateJAMF.xml
   POLICY_NAME: "Patch Management - Install Latest %NAME%"
+  SELFSERVICE_GROUP_NAME: Software - Deploy %NAME% via Self Service
   SELFSERVICE_GROUP_TEMPLATE: SelfServiceSmartGroupTemplate.xml
   SELFSERVICE_POLICY_CATEGORY: Software - Unlicensed
   SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMF.xml
@@ -50,6 +51,7 @@ Process:
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader
     Arguments:
       computergroup_template: "%SELFSERVICE_GROUP_TEMPLATE%"
+      computergroup_name: "%SELFSERVICE_GROUP_NAME%"
       
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
     Arguments:
