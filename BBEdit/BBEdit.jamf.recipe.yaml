@@ -50,7 +50,6 @@ Process:
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader
     Arguments:
       computergroup_template: "%SELFSERVICE_GROUP_TEMPLATE%"
-      computergroup_name: "%SELFSERVICE_GROUP_NAME%"
       
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
     Arguments:
