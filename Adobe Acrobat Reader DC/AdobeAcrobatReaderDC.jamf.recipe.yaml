@@ -12,6 +12,7 @@ Input:
   POLICY_TEMPLATE: PolicyTemplateJAMF.xml
   POLICY_NAME: "Patch Management - Install Latest %NAME%"
   UPDATE_PREDICATE: "pkg_uploaded == False"
+  replace_policy: "True"
 
 Process:
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
