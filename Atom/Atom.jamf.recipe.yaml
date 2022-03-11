@@ -1,7 +1,7 @@
 Description: Downloads the latest version of Atom, makes a pkg of it, and uploads to the JSS.
 Identifier: com.github.team-dab.recipes.jamf.Atom
 MinimumVersion: "2.3"
-ParentRecipe: com.github.autopkg.pkg.Atom
+ParentRecipe: io.github.hjuutilainen.pkg.Atom
 
 Input:
   NAME: Atom
