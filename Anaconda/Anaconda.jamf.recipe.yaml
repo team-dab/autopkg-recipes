@@ -1,24 +1,18 @@
-Description: Uses parent pkg recipe to download the latest Adobe Reader DC and import it into the JSS.
-Identifier: com.github.team-dab.recipes.jamf.BBEdit
+Description: Downloads the current release version of Anaconda and imports into a JAMF Pro Server.
+Identifier: com.github.team-dab.recipes.jamf.Anaconda
 MinimumVersion: "2.3"
-ParentRecipe: com.github.autopkg.pkg.BBEdit
+ParentRecipe: com.github.team-dab.download.Anaconda
 
 Input:
-  NAME: BBEdit
+  NAME: Anaconda
   CATEGORY: Software - Unlicensed
-  GROUP_NAME: "Patch Reporting: %NAME%"
-  GROUP_TEMPLATE: SmartGroupUniversalTemplate.xml
-  POLICY_CATEGORY: Automatic Patch Management
-  POLICY_TEMPLATE: PolicyTemplateJAMF.xml
-  POLICY_NAME: "Patch Management - Install Latest %NAME%"
   SELFSERVICE_POLICY_CATEGORY: Software - Unlicensed
   SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMF.xml
   SELFSERVICE_POLICY_NAME: Software - Deploy %NAME% via Self Service
-  SELFSERVICE_DESCRIPTION: BBEdit is the leading professional HTML and text editor for the Mac.
+  SELFSERVICE_DESCRIPTION: Install the latest version of %NAME% on your device.
   SELFSERVICE_ICON: "%NAME%.png"
   UPDATE_PREDICATE: "pkg_uploaded == False"
   replace_policy: "True"
-  replace_group: "True"
   
 
 Process:
@@ -36,16 +30,6 @@ Process:
     Arguments:
       predicate: "%UPDATE_PREDICATE%"
 
-  - Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader
-    Arguments:
-      computergroup_template: "%GROUP_TEMPLATE%"
-      computergroup_name: "%GROUP_NAME%"
-
-  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
-    Arguments:
-      policy_template: "%POLICY_TEMPLATE%"
-      policy_name: "%POLICY_NAME%"
-      
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
     Arguments:
       policy_template: "%SELFSERVICE_POLICY_TEMPLATE%"
