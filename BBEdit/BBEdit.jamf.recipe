@@ -24,8 +24,6 @@
 		<string>PolicyTemplateJAMF.xml</string>
 		<key>SELFSERVICE_DESCRIPTION</key>
 		<string>BBEdit is the leading professional HTML and text editor for the Mac.</string>
-		<key>SELFSERVICE_GROUP_NAME</key>
-		<string>Patch Reporting: %NAME%</string>
 		<key>SELFSERVICE_GROUP_TEMPLATE</key>
 		<string>SelfServiceSmartGroupTemplate.xml</string>
 		<key>SELFSERVICE_ICON</key>
@@ -38,6 +36,10 @@
 		<string>SelfServicePolicyTemplateJAMF.xml</string>
 		<key>UPDATE_PREDICATE</key>
 		<string>pkg_uploaded == False</string>
+		<key>replace_group</key>
+		<string>True</string>
+		<key>replace_policy</key>
+		<string>True</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
@@ -94,6 +96,30 @@
 				<string>%POLICY_NAME%</string>
 				<key>policy_template</key>
 				<string>%POLICY_TEMPLATE%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>computergroup_name</key>
+				<string>%SELFSERVICE_GROUP_NAME%</string>
+				<key>computergroup_template</key>
+				<string>%SELFSERVICE_GROUP_TEMPLATE%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>icon</key>
+				<string>%SELFSERVICE_ICON%</string>
+				<key>policy_name</key>
+				<string>%SELFSERVICE_POLICY_NAME%</string>
+				<key>policy_template</key>
+				<string>%SELFSERVICE_POLICY_TEMPLATE%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</string>

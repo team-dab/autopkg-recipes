@@ -11,7 +11,6 @@ Input:
   POLICY_CATEGORY: Automatic Patch Management
   POLICY_TEMPLATE: PolicyTemplateJAMF.xml
   POLICY_NAME: "Patch Management - Install Latest %NAME%"
-  SELFSERVICE_GROUP_NAME: "Patch Reporting: %NAME%"
   SELFSERVICE_GROUP_TEMPLATE: SelfServiceSmartGroupTemplate.xml
   SELFSERVICE_POLICY_CATEGORY: Software - Unlicensed
   SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMF.xml
@@ -19,7 +18,9 @@ Input:
   SELFSERVICE_DESCRIPTION: BBEdit is the leading professional HTML and text editor for the Mac.
   SELFSERVICE_ICON: "%NAME%.png"
   UPDATE_PREDICATE: "pkg_uploaded == False"
-
+  replace_policy: "True"
+  replace_group: "True"
+  
 
 Process:
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
