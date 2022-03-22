@@ -1,5 +1,5 @@
-Description: Downloads the latest version of iTerm, makes a pkg of it, and uploads to the JSS.
-Identifier: com.github.team-dab.recipes.jamf.iTerm
+Description: Downloads the latest version of iTerm2, makes a pkg of it, and uploads to the JSS. Name in the package is iTerm and not iTerm2 because the app itself is called iTerm.app
+Identifier: com.github.team-dab.recipes.jamf.iTerm2
 MinimumVersion: "2.3"
 ParentRecipe: io.github.hjuutilainen.pkg.iTerm2
 
