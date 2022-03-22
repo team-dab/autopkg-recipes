@@ -4,19 +4,18 @@ MinimumVersion: "2.3"
 ParentRecipe: com.github.smithjw.pkg.Docker
 
 Input:
-  NAME: Docker-ARM64
+  NAME: Docker
   CATEGORY: Software - Licensed
-  GROUP_NAME: "Patch Reporting: %NAME%"
+  GROUP_NAME: "Patch Reporting: %NAME%-ARM64"
   GROUP_TEMPLATE: SmartGroupARM64Template.xml
   POLICY_CATEGORY: Automatic Patch Management
   POLICY_TEMPLATE: PolicyTemplateJAMFDISABLED.xml
-  POLICY_NAME: "Patch Management - Install Latest %NAME%"
+  POLICY_NAME: "Patch Management - Install Latest %NAME%-ARM64"
   SELFSERVICE_POLICY_CATEGORY: Software - Licensed
   SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMFARM64.xml
-  SELFSERVICE_POLICY_NAME: Software - Deploy %NAME% via Self Service
-  SELFSERVICE_DESCRIPTION: Install the latest version of %NAME% on your device.
-  SELFSERVICE_ICON: "%APPNAME_WITHOUTPROCESSOR%.png"
-  APPNAME_WITHOUTPROCESSOR: Docker
+  SELFSERVICE_POLICY_NAME: Software - Deploy %NAME%-ARM64 via Self Service
+  SELFSERVICE_DESCRIPTION: Install the latest version of %NAME%-ARM64 on your device.
+  SELFSERVICE_ICON: "%NAME%.png"
   ARCHITECTURE: arm64
   DOWNLOAD_TYPE: arm64
   UPDATE_PREDICATE: "pkg_uploaded == False"

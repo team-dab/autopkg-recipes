@@ -8,8 +8,6 @@
 	<string>com.github.team-dab.recipes.jamf.Docker-ARM64</string>
 	<key>Input</key>
 	<dict>
-		<key>APPNAME_WITHOUTPROCESSOR</key>
-		<string>Docker</string>
 		<key>ARCHITECTURE</key>
 		<string>arm64</string>
 		<key>CATEGORY</key>
@@ -17,25 +15,25 @@
 		<key>DOWNLOAD_TYPE</key>
 		<string>arm64</string>
 		<key>GROUP_NAME</key>
-		<string>Patch Reporting: %NAME%</string>
+		<string>Patch Reporting: %NAME%-ARM64</string>
 		<key>GROUP_TEMPLATE</key>
 		<string>SmartGroupARM64Template.xml</string>
 		<key>NAME</key>
-		<string>Docker-ARM64</string>
+		<string>Docker</string>
 		<key>POLICY_CATEGORY</key>
 		<string>Automatic Patch Management</string>
 		<key>POLICY_NAME</key>
-		<string>Patch Management - Install Latest %NAME%</string>
+		<string>Patch Management - Install Latest %NAME%-ARM64</string>
 		<key>POLICY_TEMPLATE</key>
 		<string>PolicyTemplateJAMFDISABLED.xml</string>
 		<key>SELFSERVICE_DESCRIPTION</key>
-		<string>Install the latest version of %NAME% on your device.</string>
+		<string>Install the latest version of %NAME%-ARM64 on your device.</string>
 		<key>SELFSERVICE_ICON</key>
-		<string>%APPNAME_WITHOUTPROCESSOR%.png</string>
+		<string>%NAME%.png</string>
 		<key>SELFSERVICE_POLICY_CATEGORY</key>
 		<string>Software - Licensed</string>
 		<key>SELFSERVICE_POLICY_NAME</key>
-		<string>Software - Deploy %NAME% via Self Service</string>
+		<string>Software - Deploy %NAME%-ARM64 via Self Service</string>
 		<key>SELFSERVICE_POLICY_TEMPLATE</key>
 		<string>SelfServicePolicyTemplateJAMFARM64.xml</string>
 		<key>UPDATE_PREDICATE</key>
