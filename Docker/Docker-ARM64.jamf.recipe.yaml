@@ -1,7 +1,7 @@
 Description: Downloads the latest version of Docker, makes a pkg of it, and uploads to the JSS.
 Identifier: com.github.team-dab.recipes.jamf.Docker-ARM64
 MinimumVersion: "2.3"
-ParentRecipe: com.github.chilcote.pkg.Docker
+ParentRecipe: com.github.smithjw.pkg.Docker
 
 Input:
   NAME: Docker-ARM64
@@ -9,7 +9,7 @@ Input:
   GROUP_NAME: "Patch Reporting: %NAME%"
   GROUP_TEMPLATE: SmartGroupARM64Template.xml
   POLICY_CATEGORY: Automatic Patch Management
-  POLICY_TEMPLATE: PolicyTemplateJAMF.xml
+  POLICY_TEMPLATE: PolicyTemplateJAMFDISABLED.xml
   POLICY_NAME: "Patch Management - Install Latest %NAME%"
   SELFSERVICE_POLICY_CATEGORY: Software - Licensed
   SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMFARM64.xml
@@ -17,10 +17,11 @@ Input:
   SELFSERVICE_DESCRIPTION: Install the latest version of %NAME% on your device.
   SELFSERVICE_ICON: "%APPNAME_WITHOUTPROCESSOR%.png"
   APPNAME_WITHOUTPROCESSOR: Docker
+  ARCHITECTURE: arm64
+  DOWNLOAD_TYPE: arm64
   UPDATE_PREDICATE: "pkg_uploaded == False"
   replace_policy: "True"
   replace_group: "True"
-  
 
 Process:
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
