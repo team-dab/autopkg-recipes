@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of iTerm, makes a pkg of it, and uploads to the JSS.</string>
+	<string>Downloads the latest version of iTerm2, makes a pkg of it, and uploads to the JSS. Name in the package is iTerm and not iTerm2 because the app itself is called iTerm.app</string>
 	<key>Identifier</key>
-	<string>com.github.team-dab.recipes.jamf.iTerm</string>
+	<string>com.github.team-dab.recipes.jamf.iTerm2</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
