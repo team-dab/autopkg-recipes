@@ -1,10 +1,10 @@
-Description: Downloads the latest version of iTerm2, makes a pkg of it, and uploads to the JSS.
-Identifier: com.github.team-dab.recipes.jamf.iTerm2
+Description: Downloads the latest version of iTerm, makes a pkg of it, and uploads to the JSS.
+Identifier: com.github.team-dab.recipes.jamf.iTerm
 MinimumVersion: "2.3"
 ParentRecipe: io.github.hjuutilainen.pkg.iTerm2
 
 Input:
-  NAME: iTerm2
+  NAME: iTerm
   CATEGORY: Software - Unlicensed
   GROUP_NAME: "Patch Reporting: %NAME%"
   GROUP_TEMPLATE: SmartGroupUniversalTemplate.xml
