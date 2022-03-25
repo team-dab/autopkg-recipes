@@ -1,0 +1,53 @@
+Description: Downloads the latest version of Keka, makes a pkg of it, and uploads to the JSS.
+Identifier: com.github.team-dab.recipes.jamf.Keka
+MinimumVersion: "2.3"
+ParentRecipe: com.github.smithjw.pkg.Keka
+
+Input:
+  NAME: Keka
+  CATEGORY: Software - Unlicensed
+  GROUP_NAME: "Patch Reporting: %NAME%"
+  GROUP_TEMPLATE: SmartGroupUniversalTemplate.xml
+  POLICY_CATEGORY: Automatic Patch Management
+  POLICY_TEMPLATE: PolicyTemplateJAMF.xml
+  POLICY_NAME: "Patch Management - Install Latest %NAME%"
+  SELFSERVICE_POLICY_CATEGORY: Software - Unlicensed
+  SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMF.xml
+  SELFSERVICE_POLICY_NAME: Software - Deploy %NAME% via Self Service
+  SELFSERVICE_DESCRIPTION: Install the latest version of %NAME% on your device. Keka is a macOS file archiver.
+  SELFSERVICE_ICON: "%NAME%.png"
+  UPDATE_PREDICATE: "pkg_uploaded == False"
+  replace_policy: "True"
+  replace_group: "True"
+  
+
+Process:
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
+    Arguments:
+      category_name: "%CATEGORY%"
+      
+  - Processor: com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+    Arguments:
+      pkg_category: "%CATEGORY%"
+  
+  - Processor: StopProcessingIf
+    Arguments:
+      predicate: "%UPDATE_PREDICATE%"
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader
+    Arguments:
+      computergroup_template: "%GROUP_TEMPLATE%"
+      computergroup_name: "%GROUP_NAME%"
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
+    Arguments:
+      policy_template: "%POLICY_TEMPLATE%"
+      policy_name: "%POLICY_NAME%"
+      
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
+    Arguments:
+      policy_template: "%SELFSERVICE_POLICY_TEMPLATE%"
+      policy_name: "%SELFSERVICE_POLICY_NAME%"
+      icon: "%SELFSERVICE_ICON%"
