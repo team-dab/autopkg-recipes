@@ -31,7 +31,7 @@
 		<key>SELFSERVICE_ICON</key>
 		<string>%APPNAME_WITHOUTPROCESSOR%.png</string>
 		<key>SELFSERVICE_POLICY_CATEGORY</key>
-		<string>Software - Licensed</string>
+		<string>Software - Unlicensed</string>
 		<key>SELFSERVICE_POLICY_NAME</key>
 		<string>Software - Deploy %NAME% via Self Service</string>
 		<key>SELFSERVICE_POLICY_TEMPLATE</key>

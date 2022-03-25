@@ -11,7 +11,7 @@ Input:
   POLICY_CATEGORY: Automatic Patch Management
   POLICY_TEMPLATE: PolicyTemplateJAMF.xml
   POLICY_NAME: "Patch Management - Install Latest %NAME%"
-  SELFSERVICE_POLICY_CATEGORY: Software - Licensed
+  SELFSERVICE_POLICY_CATEGORY: Software - Unlicensed
   SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMFARM64.xml
   SELFSERVICE_POLICY_NAME: Software - Deploy %NAME% via Self Service
   SELFSERVICE_DESCRIPTION: Install the latest version of %NAME% on your device.
