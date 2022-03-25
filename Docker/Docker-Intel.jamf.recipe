@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of Docker, makes a pkg of it, and uploads to the JSS.</string>
+	<key>Identifier</key>
+	<string>com.github.team-dab.recipes.jamf.Docker-Intel</string>
+	<key>Input</key>
+	<dict>
+		<key>ARCHITECTURE</key>
+		<string>x64</string>
+		<key>CATEGORY</key>
+		<string>Software - Licensed</string>
+		<key>DOWNLOAD_TYPE</key>
+		<string>amd64</string>
+		<key>GROUP_NAME</key>
+		<string>Patch Reporting: %NAME%-Intel</string>
+		<key>GROUP_TEMPLATE</key>
+		<string>SmartGroupIntelJAMFTemplate.xml</string>
+		<key>NAME</key>
+		<string>Docker</string>
+		<key>POLICY_CATEGORY</key>
+		<string>Automatic Patch Management</string>
+		<key>POLICY_NAME</key>
+		<string>Patch Management - Install Latest %NAME%-Intel</string>
+		<key>POLICY_TEMPLATE</key>
+		<string>PolicyTemplateJAMF.xml</string>
+		<key>SELFSERVICE_DESCRIPTION</key>
+		<string>Install the latest version of %NAME%-Intel on your device.</string>
+		<key>SELFSERVICE_ICON</key>
+		<string>%NAME%.png</string>
+		<key>SELFSERVICE_POLICY_CATEGORY</key>
+		<string>Software - Licensed</string>
+		<key>SELFSERVICE_POLICY_NAME</key>
+		<string>Software - Deploy %NAME%-Intel via Self Service</string>
+		<key>SELFSERVICE_POLICY_TEMPLATE</key>
+		<string>SelfServicePolicyTemplateJAMFIntel.xml</string>
+		<key>UPDATE_PREDICATE</key>
+		<string>pkg_uploaded == False</string>
+		<key>replace_group</key>
+		<string>True</string>
+		<key>replace_policy</key>
+		<string>True</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.3</string>
+	<key>ParentRecipe</key>
+	<string>com.github.smithjw.pkg.Docker</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>category_name</key>
+				<string>%CATEGORY%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_category</key>
+				<string>%CATEGORY%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfPackageUploader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>predicate</key>
+				<string>%UPDATE_PREDICATE%</string>
+			</dict>
+			<key>Processor</key>
+			<string>StopProcessingIf</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>computergroup_name</key>
+				<string>%GROUP_NAME%</string>
+				<key>computergroup_template</key>
+				<string>%GROUP_TEMPLATE%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>policy_name</key>
+				<string>%POLICY_NAME%</string>
+				<key>policy_template</key>
+				<string>%POLICY_TEMPLATE%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>icon</key>
+				<string>%SELFSERVICE_ICON%</string>
+				<key>policy_name</key>
+				<string>%SELFSERVICE_POLICY_NAME%</string>
+				<key>policy_template</key>
+				<string>%SELFSERVICE_POLICY_TEMPLATE%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</string>
+		</dict>
+	</array>
+</dict>
+</plist>
