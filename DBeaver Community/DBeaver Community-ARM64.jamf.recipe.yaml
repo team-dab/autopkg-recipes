@@ -5,7 +5,7 @@ ParentRecipe: com.github.team-dab.pkg.DBeaverCommunity
 
 Input:
   NAME: DBeaver Community-ARM64
-  CATEGORY: Software - Licensed
+  CATEGORY: Software - Unlicensed
   GROUP_NAME: "Patch Reporting: %NAME%"
   GROUP_TEMPLATE: SmartGroupARM64Template.xml
   POLICY_CATEGORY: Automatic Patch Management
