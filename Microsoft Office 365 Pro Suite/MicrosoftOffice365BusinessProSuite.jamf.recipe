@@ -40,8 +40,17 @@
 	<key>Process</key>
 	<array>
 		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>category_name</key>
+				<string>%CATEGORY%</string>
+			</dict>
 			<key>Processor</key>
-			<string>com.github.grahampugh.recipes.commonprocess/VersionRegexGenerator</string>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
