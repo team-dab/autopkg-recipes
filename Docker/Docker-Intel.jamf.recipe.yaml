@@ -7,7 +7,7 @@ Input:
   NAME: Docker
   CATEGORY: Software - Licensed
   GROUP_NAME: "Patch Reporting: %NAME%-Intel"
-  GROUP_TEMPLATE: SmartGroupIntelJAMFTemplate.xml
+  GROUP_TEMPLATE: SmartGroupARM64TemplateJSSInventoryname.xml
   POLICY_CATEGORY: Automatic Patch Management
   POLICY_TEMPLATE: PolicyTemplateJAMF.xml
   POLICY_NAME: "Patch Management - Install Latest %NAME%-Intel"

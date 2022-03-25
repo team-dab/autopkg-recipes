@@ -4,18 +4,19 @@ MinimumVersion: "2.3"
 ParentRecipe: com.github.team-dab.pkg.DBeaverCommunity
 
 Input:
-  NAME: DBeaver Community
+  NAME: DBeaver Community-ARM64
   CATEGORY: Software - Licensed
-  GROUP_NAME: "Patch Reporting: %NAME%-ARM64"
-  GROUP_TEMPLATE: SmartGroupARM64JAMFTemplate.xml
+  GROUP_NAME: "Patch Reporting: %NAME%"
+  GROUP_TEMPLATE: SmartGroupARM64Template.xml
   POLICY_CATEGORY: Automatic Patch Management
   POLICY_TEMPLATE: PolicyTemplateJAMF.xml
-  POLICY_NAME: "Patch Management - Install Latest %NAME%-ARM64"
+  POLICY_NAME: "Patch Management - Install Latest %NAME%"
   SELFSERVICE_POLICY_CATEGORY: Software - Licensed
   SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMFARM64.xml
-  SELFSERVICE_POLICY_NAME: Software - Deploy %NAME%-ARM64 via Self Service
-  SELFSERVICE_DESCRIPTION: Install the latest version of %NAME%-ARM64 on your device.
-  SELFSERVICE_ICON: "%NAME%.png"
+  SELFSERVICE_POLICY_NAME: Software - Deploy %NAME% via Self Service
+  SELFSERVICE_DESCRIPTION: Install the latest version of %NAME% on your device.
+  SELFSERVICE_ICON: "%APPNAME_WITHOUTPROCESSOR%.png"
+  APPNAME_WITHOUTPROCESSOR: DBeaver
   DOWNLOAD_URL: "https://dbeaver.io/files/dbeaver-ce-latest-macos-aarch64.dmg"
   UPDATE_PREDICATE: "pkg_uploaded == False"
   replace_policy: "True"

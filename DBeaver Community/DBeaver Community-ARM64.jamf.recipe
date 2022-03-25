@@ -8,30 +8,32 @@
 	<string>com.github.team-dab.recipes.jamf.DBeaver Community-ARM64</string>
 	<key>Input</key>
 	<dict>
+		<key>APPNAME_WITHOUTPROCESSOR</key>
+		<string>DBeaver</string>
 		<key>CATEGORY</key>
 		<string>Software - Licensed</string>
 		<key>DOWNLOAD_URL</key>
 		<string>https://dbeaver.io/files/dbeaver-ce-latest-macos-aarch64.dmg</string>
 		<key>GROUP_NAME</key>
-		<string>Patch Reporting: %NAME%-ARM64</string>
+		<string>Patch Reporting: %NAME%</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>SmartGroupARM64JAMFTemplate.xml</string>
+		<string>SmartGroupARM64Template.xml</string>
 		<key>NAME</key>
-		<string>DBeaver Community</string>
+		<string>DBeaver Community-ARM64</string>
 		<key>POLICY_CATEGORY</key>
 		<string>Automatic Patch Management</string>
 		<key>POLICY_NAME</key>
-		<string>Patch Management - Install Latest %NAME%-ARM64</string>
+		<string>Patch Management - Install Latest %NAME%</string>
 		<key>POLICY_TEMPLATE</key>
 		<string>PolicyTemplateJAMF.xml</string>
 		<key>SELFSERVICE_DESCRIPTION</key>
-		<string>Install the latest version of %NAME%-ARM64 on your device.</string>
+		<string>Install the latest version of %NAME% on your device.</string>
 		<key>SELFSERVICE_ICON</key>
-		<string>%NAME%.png</string>
+		<string>%APPNAME_WITHOUTPROCESSOR%.png</string>
 		<key>SELFSERVICE_POLICY_CATEGORY</key>
 		<string>Software - Licensed</string>
 		<key>SELFSERVICE_POLICY_NAME</key>
-		<string>Software - Deploy %NAME%-ARM64 via Self Service</string>
+		<string>Software - Deploy %NAME% via Self Service</string>
 		<key>SELFSERVICE_POLICY_TEMPLATE</key>
 		<string>SelfServicePolicyTemplateJAMFARM64.xml</string>
 		<key>UPDATE_PREDICATE</key>

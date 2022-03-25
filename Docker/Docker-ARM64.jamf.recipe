@@ -17,7 +17,7 @@
 		<key>GROUP_NAME</key>
 		<string>Patch Reporting: %NAME%-ARM64</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>SmartGroupARM64JAMFTemplate.xml</string>
+		<string>SmartGroupARM64TemplateJSSInventoryname.xml</string>
 		<key>NAME</key>
 		<string>Docker</string>
 		<key>POLICY_CATEGORY</key>

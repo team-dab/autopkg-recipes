@@ -3,37 +3,37 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Docker, makes a pkg of it, and uploads to the JSS.</string>
+	<string>Downloads the latest version of DBeaver Community, makes a pkg of it, and uploads to the JSS.</string>
 	<key>Identifier</key>
-	<string>com.github.team-dab.recipes.jamf.Docker-Intel</string>
+	<string>com.github.team-dab.recipes.jamf.DBeaver Community-Intel</string>
 	<key>Input</key>
 	<dict>
-		<key>ARCHITECTURE</key>
-		<string>x64</string>
+		<key>APPNAME_WITHOUTPROCESSOR</key>
+		<string>DBeaver</string>
 		<key>CATEGORY</key>
 		<string>Software - Licensed</string>
-		<key>DOWNLOAD_TYPE</key>
-		<string>amd64</string>
+		<key>DOWNLOAD_URL</key>
+		<string>https://dbeaver.io/files/dbeaver-ce-latest-macos-x86_64.dmg</string>
 		<key>GROUP_NAME</key>
-		<string>Patch Reporting: %NAME%-Intel</string>
+		<string>Patch Reporting: %NAME%</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>SmartGroupARM64TemplateJSSInventoryname.xml</string>
+		<string>SmartGroupIntelTemplate.xml</string>
 		<key>NAME</key>
-		<string>Docker</string>
+		<string>DBeaver Community-Intel</string>
 		<key>POLICY_CATEGORY</key>
 		<string>Automatic Patch Management</string>
 		<key>POLICY_NAME</key>
-		<string>Patch Management - Install Latest %NAME%-Intel</string>
+		<string>Patch Management - Install Latest %NAME%</string>
 		<key>POLICY_TEMPLATE</key>
 		<string>PolicyTemplateJAMF.xml</string>
 		<key>SELFSERVICE_DESCRIPTION</key>
-		<string>Install the latest version of %NAME%-Intel on your device.</string>
+		<string>Install the latest version of %NAME% on your device.</string>
 		<key>SELFSERVICE_ICON</key>
-		<string>%NAME%.png</string>
+		<string>%APPNAME_WITHOUTPROCESSOR%.png</string>
 		<key>SELFSERVICE_POLICY_CATEGORY</key>
 		<string>Software - Licensed</string>
 		<key>SELFSERVICE_POLICY_NAME</key>
-		<string>Software - Deploy %NAME%-Intel via Self Service</string>
+		<string>Software - Deploy %NAME% via Self Service</string>
 		<key>SELFSERVICE_POLICY_TEMPLATE</key>
 		<string>SelfServicePolicyTemplateJAMFIntel.xml</string>
 		<key>UPDATE_PREDICATE</key>
@@ -46,7 +46,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.github.smithjw.pkg.Docker</string>
+	<string>com.github.team-dab.pkg.DBeaverCommunity</string>
 	<key>Process</key>
 	<array>
 		<dict>
