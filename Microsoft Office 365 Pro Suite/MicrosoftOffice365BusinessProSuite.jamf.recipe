@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of the Microsoft Office 365 Business Pro Suite installer package and imports it into your JSS.</string>
+	<key>Identifier</key>
+	<string>com.github.team-dab.recipes.jamf.MicrosoftOffice365BusinessProSuite</string>
+	<key>Input</key>
+	<dict>
+		<key>ADE_POLICY_CATEGORY</key>
+		<string>@Automated Device Enrollment</string>
+		<key>ADE_POLICY_NAME</key>
+		<string>23 Microsoft Office 365</string>
+		<key>ADE_POLICY_TEMPLATE</key>
+		<string>ADEPolicyTemplateJamf.xml</string>
+		<key>ADE_POLICY_TRIGGER</key>
+		<string>DEP_MSOffice</string>
+		<key>CATEGORY</key>
+		<string>Software - Licensed</string>
+		<key>NAME</key>
+		<string>Microsoft Office 365 Business Pro Suite</string>
+		<key>SELFSERVICE_DESCRIPTION</key>
+		<string>Microsoft Office 365 is a software suite for word processing, spreadsheets, presentations, graphics and more.</string>
+		<key>SELFSERVICE_ICON</key>
+		<string>MicrosoftOffice365BusinessProSuite.png</string>
+		<key>SELFSERVICE_POLICY_CATEGORY</key>
+		<string>Software - Licensed</string>
+		<key>SELFSERVICE_POLICY_NAME</key>
+		<string>Software - Deploy %NAME% via Self Service</string>
+		<key>SELFSERVICE_POLICY_TEMPLATE</key>
+		<string>SelfServicePolicyTemplateJAMF.xml</string>
+		<key>UPDATE_PREDICATE</key>
+		<string>pkg_uploaded == False</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.3</string>
+	<key>ParentRecipe</key>
+	<string>com.github.team-dab.pkg.MicrosoftOffice365BusinessProSuite</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.recipes.commonprocess/VersionRegexGenerator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_category</key>
+				<string>%CATEGORY%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfPackageUploader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>predicate</key>
+				<string>%UPDATE_PREDICATE%</string>
+			</dict>
+			<key>Processor</key>
+			<string>StopProcessingIf</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>policy_name</key>
+				<string>%ADE_POLICY_NAME%</string>
+				<key>policy_template</key>
+				<string>%ADE_POLICY_TEMPLATE%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>icon</key>
+				<string>%SELFSERVICE_ICON%</string>
+				<key>policy_name</key>
+				<string>%SELFSERVICE_POLICY_NAME%</string>
+				<key>policy_template</key>
+				<string>%SELFSERVICE_POLICY_TEMPLATE%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</string>
+		</dict>
+	</array>
+</dict>
+</plist>

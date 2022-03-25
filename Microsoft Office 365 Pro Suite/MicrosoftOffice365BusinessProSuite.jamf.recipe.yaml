@@ -1,0 +1,40 @@
+Description: Downloads the latest version of the Microsoft Office 365 Business Pro Suite installer package and imports it into your JSS.
+Identifier: com.github.team-dab.recipes.jamf.MicrosoftOffice365BusinessProSuite
+MinimumVersion: "2.3"
+ParentRecipe: com.github.team-dab.pkg.MicrosoftOffice365BusinessProSuite
+
+Input:
+  NAME: Microsoft Office 365 Business Pro Suite
+  CATEGORY: Software - Licensed
+  UPDATE_PREDICATE: "pkg_uploaded == False"
+  ADE_POLICY_TEMPLATE: ADEPolicyTemplateJamf.xml
+  ADE_POLICY_CATEGORY: "@Automated Device Enrollment"
+  ADE_POLICY_NAME: 23 Microsoft Office 365
+  ADE_POLICY_TRIGGER: DEP_MSOffice
+  SELFSERVICE_POLICY_CATEGORY: Software - Licensed
+  SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMF.xml
+  SELFSERVICE_POLICY_NAME: Software - Deploy %NAME% via Self Service
+  SELFSERVICE_DESCRIPTION: Microsoft Office 365 is a software suite for word processing, spreadsheets, presentations, graphics and more.
+  SELFSERVICE_ICON: "MicrosoftOffice365BusinessProSuite.png"
+
+Process:
+  - Processor: com.github.grahampugh.recipes.commonprocess/VersionRegexGenerator
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+    Arguments:
+      pkg_category: "%CATEGORY%"
+  
+  - Processor: StopProcessingIf
+    Arguments:
+      predicate: "%UPDATE_PREDICATE%"
+            
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
+    Arguments:
+      policy_template: "%ADE_POLICY_TEMPLATE%"
+      policy_name: "%ADE_POLICY_NAME%"
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
+    Arguments:
+      policy_template: "%SELFSERVICE_POLICY_TEMPLATE%"
+      policy_name: "%SELFSERVICE_POLICY_NAME%"
+      icon: "%SELFSERVICE_ICON%"
