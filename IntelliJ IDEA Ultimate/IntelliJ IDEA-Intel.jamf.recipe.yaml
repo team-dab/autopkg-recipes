@@ -1,0 +1,39 @@
+Description: Downloads the latest version of IntelliJ IDEA, makes a pkg of it, and uploads to the JSS.
+Identifier: com.github.team-dab.recipes.jamf.IntelliJIDEA-Intel
+MinimumVersion: "2.3"
+ParentRecipe: com.github.team-dab.pkg.IntelliJIDEA
+
+Input:
+  NAME: IntelliJ Idea Ultimate-Intel
+  CATEGORY: Software - Licensed
+  SELFSERVICE_POLICY_CATEGORY: Software - Licensed
+  SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMFIntel.xml
+  SELFSERVICE_POLICY_NAME: Software - Deploy %NAME% via Self Service
+  SELFSERVICE_DESCRIPTION: Install the latest version of %NAME% on your device.
+  SELFSERVICE_ICON: "%APPNAME_WITHOUTPROCESSOR%.png"
+  APPNAME_WITHOUTPROCESSOR: IntelliJ Idea Ultimate
+  platform: mac
+  UPDATE_PREDICATE: "pkg_uploaded == False"
+  replace_policy: "True"
+  replace_group: "True"
+
+Process:
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
+    Arguments:
+      category_name: "%CATEGORY%"
+      
+  - Processor: com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+    Arguments:
+      pkg_category: "%CATEGORY%"
+  
+  - Processor: StopProcessingIf
+    Arguments:
+      predicate: "%UPDATE_PREDICATE%"
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
+    Arguments:
+      policy_template: "%SELFSERVICE_POLICY_TEMPLATE%"
+      policy_name: "%SELFSERVICE_POLICY_NAME%"
+      icon: "%SELFSERVICE_ICON%"
