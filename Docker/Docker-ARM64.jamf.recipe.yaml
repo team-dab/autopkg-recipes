@@ -9,7 +9,7 @@ Input:
   GROUP_NAME: "Patch Reporting: %NAME%-ARM64"
   GROUP_TEMPLATE: SmartGroupARM64JAMFTemplate.xml
   POLICY_CATEGORY: Automatic Patch Management
-  POLICY_TEMPLATE: PolicyTemplateJAMFDISABLED.xml
+  POLICY_TEMPLATE: PolicyTemplateJAMF.xml
   POLICY_NAME: "Patch Management - Install Latest %NAME%-ARM64"
   SELFSERVICE_POLICY_CATEGORY: Software - Licensed
   SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMFARM64.xml
