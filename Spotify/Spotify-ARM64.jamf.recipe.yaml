@@ -5,7 +5,7 @@ ParentRecipe: com.github.homebysix.pkg.Spotify
 
 Input:
   NAME: Spotify-ARM64
-  CATEGORY: Utility
+  CATEGORY: Software - Unlicensed
   GROUP_NAME: "Patch Reporting: %NAME%"
   GROUP_TEMPLATE: SmartGroupARM64Template.xml
   POLICY_CATEGORY: Automatic Patch Management
