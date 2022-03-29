@@ -1,0 +1,58 @@
+Description: Downloads the latest version of Brave Browser, makes a pkg of it, and uploads to the JSS.
+Identifier: com.github.team-dab.recipes.jamf.BraveBrowser-ARM64
+MinimumVersion: "2.3"
+ParentRecipe: com.github.team-dab.pkg.Brave
+
+Input:
+  NAME: BraveBrowser-ARM64
+  CATEGORY: Software - Unlicensed
+  GROUP_NAME: "Patch Reporting: %NAME%"
+  GROUP_TEMPLATE: SmartGroupARM64TemplateAlerter.xml
+  POLICY_CATEGORY: Automatic Patch Management
+  POLICY_TEMPLATE: PolicyTemplateJAMFTrigger.xml
+  POLICY_NAME: "Patch Management - Install Latest %NAME%"
+  SELFSERVICE_POLICY_CATEGORY: Software - Unlicensed
+  SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMFARM64.xml
+  SELFSERVICE_POLICY_NAME: Software - Deploy %NAME% via Self Service
+  SELFSERVICE_DESCRIPTION: Brave Browser is a fast, free, secure web browser with a built-in ad blocker, tracking and security protection, and optimized data and battery experience.
+  SELFSERVICE_ICON: "%APPNAME_WITHOUTPROCESSOR%.png"
+  ADE_POLICY_TEMPLATE: ADEPolicyTemplateJamf.xml
+  ADE_POLICY_CATEGORY: "@Automated Device Enrollment"
+  ADE_POLICY_NAME: 20 Brave-ARM64
+  ADE_POLICY_TRIGGER: DEP_BraveBrowser-ARM64
+  APPNAME_WITHOUTPROCESSOR: Brave Browser
+  DOWNLOAD_URL: "https://laptop-updates.brave.com/latest/osxarm64"
+  UPDATE_PREDICATE: "pkg_uploaded == False"
+  replace_policy: "True"
+  replace_group: "True"
+
+Process:
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
+    Arguments:
+      category_name: "%CATEGORY%"
+      
+  - Processor: com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+    Arguments:
+      pkg_category: "%CATEGORY%"
+  
+  - Processor: StopProcessingIf
+    Arguments:
+      predicate: "%UPDATE_PREDICATE%"
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader
+    Arguments:
+      computergroup_template: "%GROUP_TEMPLATE%"
+      computergroup_name: "%GROUP_NAME%"
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
+    Arguments:
+      policy_template: "%POLICY_TEMPLATE%"
+      policy_name: "%POLICY_NAME%"
+      
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
+    Arguments:
+      policy_template: "%SELFSERVICE_POLICY_TEMPLATE%"
+      policy_name: "%SELFSERVICE_POLICY_NAME%"
+      icon: "%SELFSERVICE_ICON%"
