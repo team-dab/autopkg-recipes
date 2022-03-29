@@ -34,6 +34,8 @@
 		<string>Patch Management - Install Latest %NAME%</string>
 		<key>POLICY_TEMPLATE</key>
 		<string>PolicyTemplateJAMFTrigger.xml</string>
+		<key>POLICY_TRIGGER</key>
+		<string>Install_BraveUpdate-ARM64</string>
 		<key>SELFSERVICE_DESCRIPTION</key>
 		<string>Brave Browser is a fast, free, secure web browser with a built-in ad blocker, tracking and security protection, and optimized data and battery experience.</string>
 		<key>SELFSERVICE_ICON</key>

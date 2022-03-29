@@ -11,6 +11,7 @@ Input:
   POLICY_CATEGORY: Automatic Patch Management
   POLICY_TEMPLATE: PolicyTemplateJAMFTrigger.xml
   POLICY_NAME: "Patch Management - Install Latest %NAME%"
+  POLICY_TRIGGER: Install_BraveUpdate-ARM64
   SELFSERVICE_POLICY_CATEGORY: Software - Unlicensed
   SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMFARM64.xml
   SELFSERVICE_POLICY_NAME: Software - Deploy %NAME% via Self Service
