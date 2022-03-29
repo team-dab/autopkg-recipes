@@ -25,7 +25,7 @@
 		<key>POLICY_NAME</key>
 		<string>Patch Management - Install Latest %NAME%</string>
 		<key>POLICY_TEMPLATE</key>
-		<string>SpotifyPolicyTemplateJAMFDISABLED.xml</string>
+		<string>PolicyTemplateJAMFScript.xml</string>
 		<key>SCRIPT_NAME</key>
 		<string>SpotifyPostinstall.sh</string>
 		<key>SELFSERVICE_DESCRIPTION</key>
@@ -37,7 +37,7 @@
 		<key>SELFSERVICE_POLICY_NAME</key>
 		<string>Software - Deploy %NAME% via Self Service</string>
 		<key>SELFSERVICE_POLICY_TEMPLATE</key>
-		<string>SpotifySelfServicePolicyTemplateJAMFARM64.xml</string>
+		<string>SelfServicePolicyTemplateJAMFARM64Script.xml</string>
 		<key>UPDATE_PREDICATE</key>
 		<string>pkg_uploaded == False</string>
 		<key>replace_group</key>

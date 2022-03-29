@@ -9,10 +9,10 @@ Input:
   GROUP_NAME: "Patch Reporting: %NAME%"
   GROUP_TEMPLATE: SmartGroupARM64Template.xml
   POLICY_CATEGORY: Automatic Patch Management
-  POLICY_TEMPLATE: SpotifyPolicyTemplateJAMFDISABLED.xml
+  POLICY_TEMPLATE: PolicyTemplateJAMFScript.xml
   POLICY_NAME: "Patch Management - Install Latest %NAME%"
   SELFSERVICE_POLICY_CATEGORY: Software - Unlicensed
-  SELFSERVICE_POLICY_TEMPLATE: SpotifySelfServicePolicyTemplateJAMFARM64.xml
+  SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMFARM64Script.xml
   SELFSERVICE_POLICY_NAME: Software - Deploy %NAME% via Self Service
   SELFSERVICE_DESCRIPTION: Stream music, create playlists and more.
   SELFSERVICE_ICON: "%APPNAME_WITHOUTPROCESSOR%.png"
