@@ -5,7 +5,7 @@ ParentRecipe: com.github.homebysix.pkg.Wireshark
 
 Input:
   NAME: Wireshark-Intel
-  CATEGORY: Software - Unlicensed
+  CATEGORY: Utility
   GROUP_NAME: "Patch Reporting: %NAME%"
   GROUP_TEMPLATE: SmartGroupIntelTemplate.xml
   POLICY_CATEGORY: Automatic Patch Management
