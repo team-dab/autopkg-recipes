@@ -125,6 +125,17 @@
 			<key>Processor</key>
 			<string>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</string>
 		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>policy_name</key>
+				<string>%ADE_POLICY_NAME%</string>
+				<key>policy_template</key>
+				<string>%ADE_POLICY_TEMPLATE%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</string>
+		</dict>
 	</array>
 </dict>
 </plist>
