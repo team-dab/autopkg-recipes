@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
-		<string>Software - Unlicensed</string>
+		<string>Software - Licensed</string>
 		<key>GROUP_NAME</key>
 		<string>Patch Reporting: %NAME%</string>
 		<key>GROUP_TEMPLATE</key>
@@ -27,7 +27,7 @@
 		<key>SELFSERVICE_ICON</key>
 		<string>%NAME%.png</string>
 		<key>SELFSERVICE_POLICY_CATEGORY</key>
-		<string>Software - Unlicensed</string>
+		<string>Software - Licensed</string>
 		<key>SELFSERVICE_POLICY_NAME</key>
 		<string>Software - Deploy %NAME% via Self Service</string>
 		<key>SELFSERVICE_POLICY_TEMPLATE</key>

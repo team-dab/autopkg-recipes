@@ -5,13 +5,13 @@ ParentRecipe: com.github.homebysix.pkg.Sketch
 
 Input:
   NAME: Sketch
-  CATEGORY: Software - Unlicensed
+  CATEGORY: Software - Licensed
   GROUP_NAME: "Patch Reporting: %NAME%"
   GROUP_TEMPLATE: SmartGroupUniversalTemplate.xml
   POLICY_CATEGORY: Automatic Patch Management
   POLICY_TEMPLATE: PolicyTemplateJAMF.xml
   POLICY_NAME: "Patch Management - Install Latest %NAME%"
-  SELFSERVICE_POLICY_CATEGORY: Software - Unlicensed
+  SELFSERVICE_POLICY_CATEGORY: Software - Licensed
   SELFSERVICE_POLICY_TEMPLATE: SketchSelfServicePolicyTemplateJAMF.xml
   SELFSERVICE_POLICY_NAME: Software - Deploy %NAME% via Self Service
   SELFSERVICE_DESCRIPTION: Design apps and websites and powerful tools, create prototypes and share your work easily. From design to developer handoff, Sketch combines a native Mac app with web-based tools.
