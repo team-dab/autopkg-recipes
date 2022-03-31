@@ -7,7 +7,7 @@ Input:
   NAME: Microsoft Teams
   CATEGORY: Software - Licensed
   SELFSERVICE_POLICY_CATEGORY: Software - Licensed
-  SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAM.xml
+  SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMF.xml
   SELFSERVICE_POLICY_NAME: Software - Deploy %NAME% via Self Service
   SELFSERVICE_DESCRIPTION: Microsoft Teams is the new chat-centered workspace in Office 365. Keep all your content, tools, people, and conversations together in one place.
   SELFSERVICE_ICON: "%NAME%.png"

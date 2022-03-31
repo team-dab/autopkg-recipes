@@ -21,7 +21,7 @@
 		<key>SELFSERVICE_POLICY_NAME</key>
 		<string>Software - Deploy %NAME% via Self Service</string>
 		<key>SELFSERVICE_POLICY_TEMPLATE</key>
-		<string>SelfServicePolicyTemplateJAM.xml</string>
+		<string>SelfServicePolicyTemplateJAMF.xml</string>
 		<key>UPDATE_PREDICATE</key>
 		<string>pkg_uploaded == False</string>
 		<key>replace_group</key>
