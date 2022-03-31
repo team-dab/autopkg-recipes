@@ -26,6 +26,8 @@
 		<string>Install_VisualStudioCodeUpdate</string>
 		<key>SELFSERVICE_DESCRIPTION</key>
 		<string>Visual Studio Code is a source code editor which includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring.</string>
+		<key>SELFSERVICE_ICON</key>
+		<string>%NAME%.png</string>
 		<key>SELFSERVICE_POLICY_CATEGORY</key>
 		<string>Software - Unlicensed</string>
 		<key>SELFSERVICE_POLICY_NAME</key>
