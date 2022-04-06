@@ -12,7 +12,7 @@ Input:
   SELFSERVICE_DESCRIPTION: Install the latest version of %NAME% on your device.
   SELFSERVICE_ICON: "%APPNAME_WITHOUTPROCESSOR%.png"
   APPNAME_WITHOUTPROCESSOR: IntelliJ Idea Ultimate
-  platform: mac
+  PLATFORM: mac
   UPDATE_PREDICATE: "pkg_uploaded == False"
   replace_policy: "True"
   replace_group: "True"

@@ -14,6 +14,8 @@
 		<string>Software - Licensed</string>
 		<key>NAME</key>
 		<string>IntelliJ Idea Ultimate-ARM64</string>
+		<key>PLATFORM</key>
+		<string>macM1</string>
 		<key>SELFSERVICE_DESCRIPTION</key>
 		<string>Install the latest version of %NAME% on your device.</string>
 		<key>SELFSERVICE_ICON</key>
@@ -26,8 +28,6 @@
 		<string>SelfServicePolicyTemplateJAMFARM64.xml</string>
 		<key>UPDATE_PREDICATE</key>
 		<string>pkg_uploaded == False</string>
-		<key>platform</key>
-		<string>macM1</string>
 		<key>replace_group</key>
 		<string>True</string>
 		<key>replace_policy</key>
