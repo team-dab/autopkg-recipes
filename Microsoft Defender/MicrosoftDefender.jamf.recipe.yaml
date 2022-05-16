@@ -21,6 +21,8 @@ Input:
   ADE_POLICY_CATEGORY: "@Automated Device Enrollment"
   ADE_POLICY_NAME: 15 Microsoft Defender
   ADE_POLICY_TRIGGER: DEP_MSDefender
+  replace_policy: "True"
+  replace_group: "True"
 
 
 
