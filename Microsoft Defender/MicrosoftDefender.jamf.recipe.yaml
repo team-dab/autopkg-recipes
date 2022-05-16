@@ -7,9 +7,9 @@ Input:
   NAME: Microsoft Defender
   CATEGORY: Software - Licensed
   GROUP_NAME: "Patch Reporting: %NAME%"
-  GROUP_TEMPLATE: MicrosoftDefenderSmartGroupTemplate.xml
+  GROUP_TEMPLATE: SmartGroupUniversalTemplate.xml
   POLICY_CATEGORY: Automatic Patch Management
-  POLICY_TEMPLATE: MicrosoftDefenderPolicyTemplate.xml
+  POLICY_TEMPLATE: PolicyTemplateJAMF.xml
   POLICY_NAME: "Patch Management - Install Latest %NAME%"
   UPDATE_PREDICATE: "pkg_uploaded == False"
   INITIAL_GROUP_NAME: "%NAME% is not installed"
@@ -17,6 +17,11 @@ Input:
   INITIAL_POLICY_CATEGORY: Software
   INITIAL_POLICY_TEMPLATE: MicrosoftDefenderInitialPolicyTemplate.xml
   INITIAL_POLICY_NAME: "Software - Install %NAME%"
+  ADE_POLICY_TEMPLATE: ADEPolicyTemplateJamf.xml
+  ADE_POLICY_CATEGORY: "@Automated Device Enrollment"
+  ADE_POLICY_NAME: 15 Microsoft Defender
+  ADE_POLICY_TRIGGER: DEP_MSDefender
+
 
 
 Process:
@@ -49,4 +54,9 @@ Process:
     Arguments:
       policy_template: "%INITIAL_POLICY_TEMPLATE%"
       policy_name: "%INITIAL_POLICY_NAME%"
+      
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
+    Arguments:
+      policy_template: "%ADE_POLICY_TEMPLATE%"
+      policy_name: "%ADE_POLICY_NAME%"
     

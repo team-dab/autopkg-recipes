@@ -1,7 +1,7 @@
 <policy>
 	<general>
 		<name>%INITIAL_POLICY_NAME%</name>
-		<enabled>false</enabled>
+		<enabled>true</enabled>
 		<trigger_checkin>true</trigger_checkin>
 		<trigger_enrollment_complete>false</trigger_enrollment_complete>
 		<trigger_login>false</trigger_login>
