@@ -109,7 +109,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>icon</key>
-				<string>%app_icon_path%</string>
+				<string>%APP_ICON_PATH%</string>
 				<key>policy_name</key>
 				<string>%SELFSERVICE_POLICY_NAME%</string>
 				<key>policy_template</key>

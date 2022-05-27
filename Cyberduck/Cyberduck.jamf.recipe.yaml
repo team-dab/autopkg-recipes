@@ -53,6 +53,6 @@ Process:
     Arguments:
       policy_template: "%SELFSERVICE_POLICY_TEMPLATE%"
       policy_name: "%SELFSERVICE_POLICY_NAME%"
-      icon: "%app_icon_path%"
+      icon: "%APP_ICON_PATH%"
       replace_icon: "True"
       
