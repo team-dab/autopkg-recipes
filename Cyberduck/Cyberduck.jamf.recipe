@@ -25,7 +25,7 @@
 		<key>SELFSERVICE_DESCRIPTION</key>
 		<string>With an easy to use interface, connect to FTP, SFTP, WebDAV, Amazon S3, Google Storage, Windows Azure, Rackspace Cloud Files and even Google Docs.</string>
 		<key>SELFSERVICE_ICON</key>
-		<string>%RECIPE_CACHE_DIR%/%NAME%.png</string>
+		<string>%NAME%.png</string>
 		<key>SELFSERVICE_POLICY_CATEGORY</key>
 		<string>Software - Unlicensed</string>
 		<key>SELFSERVICE_POLICY_NAME</key>
