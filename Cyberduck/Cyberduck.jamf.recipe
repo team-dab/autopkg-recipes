@@ -24,6 +24,8 @@
 		<string>PolicyTemplateJAMF.xml</string>
 		<key>SELFSERVICE_DESCRIPTION</key>
 		<string>With an easy to use interface, connect to FTP, SFTP, WebDAV, Amazon S3, Google Storage, Windows Azure, Rackspace Cloud Files and even Google Docs.</string>
+		<key>SELFSERVICE_ICON</key>
+		<string>%NAME%.png</string>
 		<key>SELFSERVICE_POLICY_CATEGORY</key>
 		<string>Software - Unlicensed</string>
 		<key>SELFSERVICE_POLICY_NAME</key>
@@ -109,7 +111,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>icon</key>
-				<string>%APP_ICON_PATH%</string>
+				<string>%SELFSERVICE_ICON%</string>
 				<key>policy_name</key>
 				<string>%SELFSERVICE_POLICY_NAME%</string>
 				<key>policy_template</key>

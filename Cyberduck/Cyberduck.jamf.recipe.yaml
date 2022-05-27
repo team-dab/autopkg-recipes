@@ -15,6 +15,7 @@ Input:
   SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMF.xml
   SELFSERVICE_POLICY_NAME: Software - Deploy %NAME% via Self Service
   SELFSERVICE_DESCRIPTION: With an easy to use interface, connect to FTP, SFTP, WebDAV, Amazon S3, Google Storage, Windows Azure, Rackspace Cloud Files and even Google Docs.
+  SELFSERVICE_ICON: "%NAME%.png"
   UPDATE_PREDICATE: "pkg_uploaded == False"
   replace_policy: "True"
   replace_group: "True"
@@ -53,6 +54,5 @@ Process:
     Arguments:
       policy_template: "%SELFSERVICE_POLICY_TEMPLATE%"
       policy_name: "%SELFSERVICE_POLICY_NAME%"
-      icon: "%APP_ICON_PATH%"
+      icon: "%SELFSERVICE_ICON%"
       replace_icon: "True"
-      
