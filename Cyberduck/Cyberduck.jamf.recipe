@@ -59,8 +59,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>icon_output_path</key>
-				<string>%RECIPE_CACHE_DIR%/Icons/Icon-%NAME%.png</string>
 				<key>source_app</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/Cyberduck.app</string>
 			</dict>
