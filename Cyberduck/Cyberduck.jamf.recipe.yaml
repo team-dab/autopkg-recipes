@@ -27,6 +27,10 @@ Process:
       category_name: "%CATEGORY%"
       
   - Processor: com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator
+  
+  - Processor: com.github.haircut.processors/AppIconExtractor
+    Arguments:
+      source_app: "%RECIPE_CACHE_DIR%/%NAME%/Cyberduck/Applications/Cyberduck.app"
 
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
     Arguments:
@@ -51,4 +55,5 @@ Process:
       policy_template: "%SELFSERVICE_POLICY_TEMPLATE%"
       policy_name: "%SELFSERVICE_POLICY_NAME%"
       icon: "%SELFSERVICE_ICON%"
+      replace_icon: "True"
       

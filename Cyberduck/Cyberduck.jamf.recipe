@@ -61,6 +61,15 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>source_app</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Cyberduck/Applications/Cyberduck.app</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.haircut.processors/AppIconExtractor</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
 				<key>pkg_category</key>
 				<string>%CATEGORY%</string>
 			</dict>
@@ -107,6 +116,8 @@
 				<string>%SELFSERVICE_POLICY_NAME%</string>
 				<key>policy_template</key>
 				<string>%SELFSERVICE_POLICY_TEMPLATE%</string>
+				<key>replace_icon</key>
+				<string>True</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</string>
