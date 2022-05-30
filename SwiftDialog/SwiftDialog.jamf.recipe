@@ -31,7 +31,7 @@
 		<key>POLICY_NAME</key>
 		<string>Patch Management - Install Latest %NAME%</string>
 		<key>POLICY_TEMPLATE</key>
-		<string>PolicyTemplateJAMFDISABLED.xml</string>
+		<string>PolicyTemplateJAMF.xml</string>
 		<key>UPDATE_PREDICATE</key>
 		<string>pkg_uploaded == False</string>
 		<key>replace_group</key>
