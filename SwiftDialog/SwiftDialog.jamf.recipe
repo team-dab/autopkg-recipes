@@ -15,7 +15,7 @@
 		<key>GROUP_TEMPLATE</key>
 		<string>SwiftDialogSmartGroupUniversalTemplate.xml</string>
 		<key>INITIAL_GROUP_NAME</key>
-		<string>%NAME% is not installed</string>
+		<string>Inventory: %NAME% is not installed</string>
 		<key>INITIAL_GROUP_TEMPLATE</key>
 		<string>SwiftDialogInitialSmartGroupTemplate.xml</string>
 		<key>INITIAL_POLICY_CATEGORY</key>
