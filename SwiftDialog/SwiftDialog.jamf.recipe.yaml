@@ -1,0 +1,54 @@
+Description: Downloads the latest version of the Swift Dialog installer package, renames the package and imports it into your JSS.
+Identifier: com.github.team-dab.recipes.jamf.swiftdialog
+MinimumVersion: "2.3"
+ParentRecipe: com.github.andredb90.download.swiftDialog
+
+Input:
+  NAME: SwiftDialog
+  CATEGORY: Software - Unlicensed
+  GROUP_NAME: "Patch Reporting: %NAME%"
+  GROUP_TEMPLATE: SwiftDialogSmartGroupUniversalTemplate
+  POLICY_CATEGORY: Automatic Patch Management
+  POLICY_TEMPLATE: PolicyTemplateJAMFDISABLED.xml
+  POLICY_NAME: "Patch Management - Install Latest %NAME%"
+  UPDATE_PREDICATE: "pkg_uploaded == False"
+  INITIAL_GROUP_NAME: "%NAME% is not installed"
+  INITIAL_GROUP_TEMPLATE: SwiftDialogInitialSmartGroupTemplate.xml
+  INITIAL_POLICY_CATEGORY: Software - Unlicensed
+  INITIAL_POLICY_TEMPLATE: SwiftDialogInitialPolicyTemplate.xml
+  INITIAL_POLICY_NAME: "Software - Install %NAME%"
+  replace_policy: "True"
+  replace_group: "True"
+
+
+
+Process:
+  - Processor: com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+    Arguments:
+      pkg_category: "%CATEGORY%"
+  
+  - Processor: StopProcessingIf
+    Arguments:
+      predicate: "%UPDATE_PREDICATE%"
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader
+    Arguments:
+      computergroup_template: "%GROUP_TEMPLATE%"
+      computergroup_name: "%GROUP_NAME%"
+
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
+    Arguments:
+      policy_template: "%POLICY_TEMPLATE%"
+      policy_name: "%POLICY_NAME%"
+      
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader
+    Arguments:
+      computergroup_template: "%INITIAL_GROUP_TEMPLATE%"
+      computergroup_name: "%INITIAL_GROUP_NAME%"
+      
+  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
+    Arguments:
+      policy_template: "%INITIAL_POLICY_TEMPLATE%"
+      policy_name: "%INITIAL_POLICY_NAME%"

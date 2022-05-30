@@ -1,0 +1,13 @@
+<computer_group>
+	<name>%INITIAL_GROUP_NAME%</name>
+	<is_smart>true</is_smart>
+	<criteria>
+		<criterion>
+			<name>SwiftDialog Installed</name>
+			<priority>0</priority>
+			<and_or>and</and_or>
+			<search_type>is</search_type>
+			<value>No</value>
+		</criterion>
+	</criteria>
+</computer_group>
