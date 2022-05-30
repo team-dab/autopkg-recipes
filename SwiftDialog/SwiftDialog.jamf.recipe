@@ -13,7 +13,7 @@
 		<key>GROUP_NAME</key>
 		<string>Patch Reporting: %NAME%</string>
 		<key>GROUP_TEMPLATE</key>
-		<string>SwiftDialogSmartGroupUniversalTemplate</string>
+		<string>SwiftDialogSmartGroupUniversalTemplate.xml</string>
 		<key>INITIAL_GROUP_NAME</key>
 		<string>%NAME% is not installed</string>
 		<key>INITIAL_GROUP_TEMPLATE</key>

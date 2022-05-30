@@ -7,7 +7,7 @@ Input:
   NAME: SwiftDialog
   CATEGORY: Software - Unlicensed
   GROUP_NAME: "Patch Reporting: %NAME%"
-  GROUP_TEMPLATE: SwiftDialogSmartGroupUniversalTemplate
+  GROUP_TEMPLATE: SwiftDialogSmartGroupUniversalTemplate.xml
   POLICY_CATEGORY: Automatic Patch Management
   POLICY_TEMPLATE: PolicyTemplateJAMFDISABLED.xml
   POLICY_NAME: "Patch Management - Install Latest %NAME%"
