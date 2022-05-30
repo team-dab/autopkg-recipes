@@ -27,7 +27,7 @@
 		<key>INITIAL_GROUP_TEMPLATE</key>
 		<string>MicrosoftDefenderInitialSmartGroupTemplate.xml</string>
 		<key>INITIAL_POLICY_CATEGORY</key>
-		<string>Software</string>
+		<string>Software - Licensed</string>
 		<key>INITIAL_POLICY_NAME</key>
 		<string>Software - Install %NAME%</string>
 		<key>INITIAL_POLICY_TEMPLATE</key>

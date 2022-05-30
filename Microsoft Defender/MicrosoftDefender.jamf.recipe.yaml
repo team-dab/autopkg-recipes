@@ -14,7 +14,7 @@ Input:
   UPDATE_PREDICATE: "pkg_uploaded == False"
   INITIAL_GROUP_NAME: "%NAME% is not installed"
   INITIAL_GROUP_TEMPLATE: MicrosoftDefenderInitialSmartGroupTemplate.xml
-  INITIAL_POLICY_CATEGORY: Software
+  INITIAL_POLICY_CATEGORY: Software - Licensed
   INITIAL_POLICY_TEMPLATE: MicrosoftDefenderInitialPolicyTemplate.xml
   INITIAL_POLICY_NAME: "Software - Install %NAME%"
   ADE_POLICY_TEMPLATE: ADEPolicyTemplateJamf.xml
