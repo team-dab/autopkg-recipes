@@ -15,6 +15,7 @@ Input:
   SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMFARM64.xml
   SELFSERVICE_POLICY_NAME: Software - Deploy %NAME%-ARM64 via Self Service
   SELFSERVICE_DESCRIPTION: Install the latest version of %NAME%-ARM64 on your device.
+  SELFSERVICE_ICON: "%NAME%.png"
   ARCHITECTURE: arm64
   DOWNLOAD_TYPE: arm64
   UPDATE_PREDICATE: "pkg_uploaded == False"
@@ -27,10 +28,6 @@ Process:
       category_name: "%CATEGORY%"
       
   - Processor: com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator
-  
-  - Processor: com.github.haircut.processors/AppIconExtractor
-    Arguments:
-      source_app: "%RECIPE_CACHE_DIR%/downloads/%NAME%-arm64.dmg"
 
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
     Arguments:
@@ -54,5 +51,6 @@ Process:
     Arguments:
       policy_template: "%SELFSERVICE_POLICY_TEMPLATE%"
       policy_name: "%SELFSERVICE_POLICY_NAME%"
-      icon: "%app_icon_path%"
+      icon: "%SELFSERVICE_ICON%"
       replace_icon: "True"
+      
