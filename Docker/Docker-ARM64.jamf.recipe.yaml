@@ -30,7 +30,7 @@ Process:
   
   - Processor: com.github.haircut.processors/AppIconExtractor
     Arguments:
-      source_app: "%RECIPE_CACHE_DIR%/downloads/%NAME%-arm64.dmg/%NAME%.app"
+      source_app: "%RECIPE_CACHE_DIR%/downloads/%NAME%-arm64.dmg"
 
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
     Arguments:
