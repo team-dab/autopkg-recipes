@@ -16,7 +16,6 @@ Input:
   SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMFIntel.xml
   SELFSERVICE_POLICY_NAME: Software - Deploy %NAME% via Self Service
   SELFSERVICE_DESCRIPTION: Brave Browser is a fast, free, secure web browser with a built-in ad blocker, tracking and security protection, and optimized data and battery experience.
-  SELFSERVICE_ICON: "%APPNAME_WITHOUTPROCESSOR%.png"
   ADE_POLICY_TEMPLATE: ADEPolicyTemplateJamf.xml
   ADE_POLICY_CATEGORY: "@Automated Device Enrollment"
   ADE_POLICY_NAME: 20 Brave-Intel
@@ -34,6 +33,10 @@ Process:
       
   - Processor: com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator
 
+  - Processor: com.github.haircut.processors/AppIconExtractor
+    Arguments:
+      source_app: "%RECIPE_CACHE_DIR%/%NAME%/Applications/%APPNAME_WITHOUTPROCESSOR%.app"
+      
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
     Arguments:
       pkg_category: "%CATEGORY%"
@@ -56,7 +59,8 @@ Process:
     Arguments:
       policy_template: "%SELFSERVICE_POLICY_TEMPLATE%"
       policy_name: "%SELFSERVICE_POLICY_NAME%"
-      icon: "%SELFSERVICE_ICON%"
+      icon: "%app_icon_path%"
+      replace_icon: "True"
       
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
     Arguments:
