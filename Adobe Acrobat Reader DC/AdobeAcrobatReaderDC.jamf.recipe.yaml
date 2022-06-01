@@ -9,7 +9,7 @@ Input:
   GROUP_NAME: "Patch Reporting: %NAME%"
   GROUP_TEMPLATE: AdobeAcrobatReaderDCSmartGroupTemplate.xml
   POLICY_CATEGORY: Automatic Patch Management
-  POLICY_TEMPLATE: PolicyTemplateJAMFDISABLED.xml
+  POLICY_TEMPLATE: PolicyTemplateJAMF.xml
   POLICY_NAME: "Patch Management - Install Latest %NAME%"
   UPDATE_PREDICATE: "pkg_uploaded == False"
   replace_policy: "True"
