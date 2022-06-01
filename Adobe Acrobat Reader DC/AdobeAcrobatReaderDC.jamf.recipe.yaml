@@ -1,7 +1,7 @@
 Description: Uses parent pkg recipe to download the latest Adobe Reader DC and import it into the JSS.
 Identifier: com.github.team-dab.recipes.jamf.AdobeReaderDC
 MinimumVersion: "2.3"
-ParentRecipe: com.github.novaksam.pkg.AdobeAcrobatReaderDCUpdates
+ParentRecipe: com.github.autopkg.pkg.AdobeReaderDC
 
 Input:
   NAME: AdobeAcrobatReaderDC
@@ -9,7 +9,7 @@ Input:
   GROUP_NAME: "Patch Reporting: %NAME%"
   GROUP_TEMPLATE: AdobeAcrobatReaderDCSmartGroupTemplate.xml
   POLICY_CATEGORY: Automatic Patch Management
-  POLICY_TEMPLATE: PolicyTemplateJAMF.xml
+  POLICY_TEMPLATE: PolicyTemplateJAMFDISABLED.xml
   POLICY_NAME: "Patch Management - Install Latest %NAME%"
   UPDATE_PREDICATE: "pkg_uploaded == False"
   replace_policy: "True"
