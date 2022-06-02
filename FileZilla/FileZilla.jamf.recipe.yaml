@@ -15,7 +15,6 @@ Input:
   SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMF.xml
   SELFSERVICE_POLICY_NAME: Software - Deploy %NAME% via Self Service
   SELFSERVICE_DESCRIPTION: Install the latest version of %NAME% on your device.
-  SELFSERVICE_ICON: "%NAME%.png"
   UPDATE_PREDICATE: "pkg_uploaded == False"
   replace_policy: "True"
   replace_group: "True"
@@ -27,6 +26,10 @@ Process:
       category_name: "%CATEGORY%"
       
   - Processor: com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator
+  
+  - Processor: com.github.haircut.processors/AppIconExtractor
+    Arguments:
+      source_app: "%RECIPE_CACHE_DIR%/%NAME%/Applications/%NAME%.app"
 
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
     Arguments:
@@ -50,4 +53,5 @@ Process:
     Arguments:
       policy_template: "%SELFSERVICE_POLICY_TEMPLATE%"
       policy_name: "%SELFSERVICE_POLICY_NAME%"
-      icon: "%SELFSERVICE_ICON%"
+      icon: "%app_icon_path%"
+      replace_icon: "True"
