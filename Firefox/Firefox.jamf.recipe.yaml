@@ -16,7 +16,6 @@ Input:
   SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMF.xml
   SELFSERVICE_POLICY_NAME: Software - Deploy %NAME% via Self Service
   SELFSERVICE_DESCRIPTION: Install the latest version of %NAME%.
-  SELFSERVICE_ICON: "%NAME%.png"
   ADE_POLICY_TEMPLATE: ADEPolicyTemplateJamf.xml
   ADE_POLICY_CATEGORY: "@Automated Device Enrollment"
   ADE_POLICY_NAME: 19 Mozilla Firefox
@@ -31,7 +30,11 @@ Process:
       category_name: "%CATEGORY%"
       
   - Processor: com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator
-
+  
+  - Processor: com.github.haircut.processors/AppIconExtractor
+    Arguments:
+      source_app: "%RECIPE_CACHE_DIR%/%NAME%/Applications/%NAME%.app"
+      
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
     Arguments:
       pkg_category: "%CATEGORY%"
@@ -54,7 +57,8 @@ Process:
     Arguments:
       policy_template: "%SELFSERVICE_POLICY_TEMPLATE%"
       policy_name: "%SELFSERVICE_POLICY_NAME%"
-      icon: "%SELFSERVICE_ICON%"
+      icon: "%app_icon_path%"
+      replace_icon: "True"
       
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
     Arguments:
