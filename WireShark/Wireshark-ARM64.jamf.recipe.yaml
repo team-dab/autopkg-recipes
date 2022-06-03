@@ -15,7 +15,6 @@ Input:
   SELFSERVICE_POLICY_TEMPLATE: SelfServicePolicyTemplateJAMFARM64.xml
   SELFSERVICE_POLICY_NAME: Software - Deploy %NAME% via Self Service
   SELFSERVICE_DESCRIPTION: Wireshark is a free and open source packet analyzer. It is used for network troubleshooting, analysis, software and communications protocol development, and education.
-  SELFSERVICE_ICON: "%APPNAME_WITHOUTPROCESSOR%.png"
   APPNAME_WITHOUTPROCESSOR: Wireshark
   ARCH: Arm
   UPDATE_PREDICATE: "pkg_uploaded == False"
@@ -28,7 +27,11 @@ Process:
       category_name: "%CATEGORY%"
       
   - Processor: com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator
-
+  
+  - Processor: com.github.haircut.processors/AppIconExtractor
+    Arguments:
+      source_app: "%RECIPE_CACHE_DIR%/%NAME%/Applications/%APPNAME_WITHOUTPROCESSOR%.app"
+      
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
     Arguments:
       pkg_category: "%CATEGORY%"
@@ -51,4 +54,5 @@ Process:
     Arguments:
       policy_template: "%SELFSERVICE_POLICY_TEMPLATE%"
       policy_name: "%SELFSERVICE_POLICY_NAME%"
-      icon: "%SELFSERVICE_ICON%"
+      icon: "%app_icon_path%"
+      replace_icon: "True"

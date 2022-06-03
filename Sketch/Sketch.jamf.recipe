@@ -24,8 +24,6 @@
 		<string>PolicyTemplateJAMF.xml</string>
 		<key>SELFSERVICE_DESCRIPTION</key>
 		<string>Design apps and websites and powerful tools, create prototypes and share your work easily. From design to developer handoff, Sketch combines a native Mac app with web-based tools.</string>
-		<key>SELFSERVICE_ICON</key>
-		<string>%NAME%.png</string>
 		<key>SELFSERVICE_POLICY_CATEGORY</key>
 		<string>Software - Licensed</string>
 		<key>SELFSERVICE_POLICY_NAME</key>
@@ -57,6 +55,15 @@
 		<dict>
 			<key>Processor</key>
 			<string>com.github.grahampugh.recipes.commonprocessors/VersionRegexGenerator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>source_app</key>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/%NAME%.app</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.haircut.processors/AppIconExtractor</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
@@ -102,11 +109,13 @@
 			<key>Arguments</key>
 			<dict>
 				<key>icon</key>
-				<string>%SELFSERVICE_ICON%</string>
+				<string>%app_icon_path%</string>
 				<key>policy_name</key>
 				<string>%SELFSERVICE_POLICY_NAME%</string>
 				<key>policy_template</key>
 				<string>%SELFSERVICE_POLICY_TEMPLATE%</string>
+				<key>replace_icon</key>
+				<string>True</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</string>

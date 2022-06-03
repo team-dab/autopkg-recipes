@@ -73,6 +73,8 @@
 				<string>%SELFSERVICE_POLICY_NAME%</string>
 				<key>policy_template</key>
 				<string>%SELFSERVICE_POLICY_TEMPLATE%</string>
+				<key>replace_icon</key>
+				<string>True</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</string>
