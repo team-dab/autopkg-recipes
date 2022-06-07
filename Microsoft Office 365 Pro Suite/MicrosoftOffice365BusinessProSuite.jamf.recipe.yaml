@@ -16,7 +16,9 @@ Input:
   SELFSERVICE_POLICY_NAME: Software - Deploy %NAME% via Self Service
   SELFSERVICE_DESCRIPTION: Microsoft Office 365 is a software suite for word processing, spreadsheets, presentations, graphics and more.
   SELFSERVICE_ICON: "MicrosoftOffice365BusinessProSuite.png"
-
+  replace_policy: "True"
+  replace_group: "True"
+  
 Process:
   - Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
     Arguments:

@@ -32,6 +32,10 @@
 		<string>SelfServicePolicyTemplateJAMF.xml</string>
 		<key>UPDATE_PREDICATE</key>
 		<string>pkg_uploaded == False</string>
+		<key>replace_group</key>
+		<string>True</string>
+		<key>replace_policy</key>
+		<string>True</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
