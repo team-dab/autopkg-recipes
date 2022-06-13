@@ -1,5 +1,5 @@
 Description: Downloads the latest version of Brave Browser, makes a pkg of it, and uploads to the JSS.
-Identifier: com.github.team-dab.recipes.jamf.BraveBrowser-Intel
+Identifier: com.github.team-dab.recipes.jamf.BraveBrowser
 MinimumVersion: "2.3"
 ParentRecipe: com.github.team-dab.pkg.Brave
 
