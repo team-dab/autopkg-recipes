@@ -4,7 +4,7 @@ MinimumVersion: "2.3"
 ParentRecipe: com.github.team-dab.pkg.Brave
 
 Input:
-  NAME: BraveBrowser
+  NAME: Brave Browser
   CATEGORY: Software - Unlicensed
   GROUP_NAME: "Patch Reporting: %NAME%"
   GROUP_TEMPLATE: SmartGroupUniversalTemplateAlerter.xml

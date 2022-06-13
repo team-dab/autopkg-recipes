@@ -25,7 +25,7 @@
 		<key>GROUP_TEMPLATE</key>
 		<string>SmartGroupUniversalTemplateAlerter.xml</string>
 		<key>NAME</key>
-		<string>BraveBrowser</string>
+		<string>Brave Browser</string>
 		<key>POLICY_CATEGORY</key>
 		<string>Automatic Patch Management</string>
 		<key>POLICY_NAME</key>
